@@ -30,7 +30,7 @@
                         </div>
                         <div class="footer_grid_item fourt_grid">
                             <h4>Support</h4>
-                            <ul>
+                            <ul class="footer_site_list">
                                 <li>
                                     <a href="#"><i class="fa-regular fa-paper-plane"></i>Shop</a>
                                 </li>
@@ -56,16 +56,20 @@
                                         <img src="src/img/blog-1_09544ddd-6a67-4ed8-b2f1-cee954d4c53c_small.jpg" alt="img_sk8"/>
                                     </div>
                                     <div class="home_blog_content">
-                                        <h3>Abandon with Rick McCrank</h3>
+                                        <h3>
+                                            <a href="#">Abandon with Rick McCrank</a>
+                                        </h3>
                                         <p>This is your store's blog. You can use it to talk about new product...</p>
                                     </div>
                                 </div>
                                 <div class="even">
-                                    <div>
+                                    <div class="home_blog_img">
                                         <img src="src/img/blog-2_2035fd6d-8799-4aaf-874f-a4261e944db5_small.jpg" alt="img_sk8"/>
                                     </div>
-                                    <div>
-                                        <h3>Classics with Rick</h3>
+                                    <div class="home_blog_content">
+                                        <h3>
+                                            <a href="#">Classics with Rick</a>
+                                        </h3>
                                         <p>This is your store's blog. You can use it to talk about new product...</p>
                                     </div>
                                 </div>
@@ -73,11 +77,11 @@
                         </div>
                         <div class="footer_grid_item">
                             <h4>Contact</h4>
-                            <p>
+                            <p class="footer_site_contact">
                                 <i class="fa-solid fa-house"></i>
                                 unknow where!!!
                             </p>
-                            <p>
+                            <p class="footer_site_email">
                                 <i class="fa-solid fa-envelope"></i>
                                 info@gmail.com
                             </p>
@@ -88,7 +92,7 @@
             <div class="footer_copyrightend">
                 <div class="copyright">
                     <p>
-                        Copyright © 2023, Skateboards <a href="#">Powered by 6</a>
+                        Copyright © 2023, Skateboards <a class="copyright_href" href="#">Powered by 6</a>
                     </p>
                 </div>
             </div>
