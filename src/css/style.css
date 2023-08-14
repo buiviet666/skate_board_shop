@@ -282,6 +282,12 @@ body {
     margin-right: 2%;
 }
 
+.footer_content_main .footer_site_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .footer_main .footer_content_main .footer_grid_item {
     float: left;
     min-height: 1px;

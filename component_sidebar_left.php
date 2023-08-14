@@ -30,7 +30,7 @@
                         <ul class = "header_menu_list">
                             <li><a href="">HOME</a></li>
                             <li><a href="">SHOP</a></li>
-                            <li><a href="">CATEGORIES</a></li>
+                            <li><a href="">CATEGORIES <i class="icon_hover_setup fa-solid fa-chevron-right"></i></a></li>
                             <li><a href="">ABOUT US</a></li>
                             <li><a href="">CONTACT US</a></li>
                         </ul>

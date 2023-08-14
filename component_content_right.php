@@ -16,7 +16,7 @@
                     <div class="grid-uniform">
                         <div class="footer_grid_item fourt_grid">
                             <h4>Infomation</h4>
-                            <ul>
+                            <ul class="footer_site_list">
                                 <li>
                                     <a href="#"><i class="fa-regular fa-paper-plane"></i>About Us</a>
                                 </li>
