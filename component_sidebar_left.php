@@ -7,17 +7,17 @@
                 <div class="header_login_signup">
                     <ul>
                         <li class = "register">
-                            <a href = "#"><i class="fa-solid fa-user-plus"></i></a>
+                            <a href = "signin.php"><i class="fa-solid fa-user-plus"></i></a>
                         </li>
                         <li class = "login">
-                            <a href="#"><i class="fa-solid fa-user-large"></i></a>
+                            <a href="login.php"><i class="fa-solid fa-user-large"></i></a>
                         </li>
                     </ul>
                 </div>
 
                 <!-- p2 logo -->
                 <h1 class = "header_logo">
-                    <a href ="#">
+                    <a href ="index.php">
                         <img src="./src/img/logo.avif" />
                     </a>
                 </h1>
@@ -28,11 +28,12 @@
                 <div class ="wrapper">
                     <div>
                         <ul class = "header_menu_list">
-                            <li><a href="">HOME</a></li>
-                            <li><a href="">SHOP</a></li>
-                            <li><a href="">CATEGORIES <i class="icon_hover_setup fa-solid fa-chevron-right"></i></a></li>
-                            <li><a href="">ABOUT US</a></li>
-                            <li><a href="">CONTACT US</a></li>
+                            <li><a href="index.php">HOME</a></li>
+                            <li><a href="about_us.php">ABOUT US</a></li>
+                            <li><a href="shop.php">SHOP</a></li>
+                            <li style="cursor: default;"><a>CATEGORIES <i class="icon_hover_setup fa-solid fa-chevron-right"></i></a></li>
+                            <li><a href="blog.php">BLOG</a></li>
+                            <li><a href="contact_us.php">CONTACT US</a></li>
                         </ul>
                     </div>
                 </div>

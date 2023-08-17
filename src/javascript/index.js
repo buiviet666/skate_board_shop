@@ -16,3 +16,4 @@ new fullpage('#fullpage', {
     // sectionsColor: ['#00FA00', '#FF0800', '#FF01E5', '#E8F000'], chỉnh màu của các trang
     navigation: true, // hiển thị thanh chấm 
 });
+
