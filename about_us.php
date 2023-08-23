@@ -29,27 +29,24 @@
                 <!-- main content -->
                 <div class="about-us">
                     <div class="about-section">
-                        <div>
+                        <div class="about_container_parapart_one">
+                            <div class="about_parapart_img">
+                                <img src="./src/img/abt_welcome_1.jpg">
+                            </div>
                             <div>
                                 <div>
-                                    <img src="./src/img/abt_welcome_1.jpg">
-                                </div>
-                                <div>
-                                    noi dung
-                                    <div>
-                                        <h3>Multipurpose store</h3>
-                                        <p>
-                                            There are many variations of passages of Lorem Ipsum available, but the majority 
-                                            have suffered alteration in some form, by injected humour, or randomised words 
-                                            which don't look even slightly believable. Lorem Ipsum available, but the majority
-                                                have suffered alteration in some form. Vivamus adipiscing lobortis sagittis. Nullam 
-                                                tempus mauris dolor, ac malesuada arcu. Praesent dolor quam, tincidunt in sollicitudin 
-                                                sit amet, volutpat sed velit. Nullam non neque ipsum.Lorem ipsum dolor sit amet, 
-                                                consectetur adipiscing elit. Morbi euismod diam eu arcu volutpat ut adipiscing sem auctor.
-                                                Vivamus adipiscing lobortis sagittis. Nullam tempus mauris dolor, ac malesuada arcu.
-                                        </p>
-                                        <a>Read More</a>
-                                    </div>
+                                    <h3>Multipurpose store</h3>
+                                    <p>
+                                        There are many variations of passages of Lorem Ipsum available, but the majority 
+                                        have suffered alteration in some form, by injected humour, or randomised words 
+                                        which don't look even slightly believable. Lorem Ipsum available, but the majority
+                                            have suffered alteration in some form. Vivamus adipiscing lobortis sagittis. Nullam 
+                                            tempus mauris dolor, ac malesuada arcu. Praesent dolor quam, tincidunt in sollicitudin 
+                                            sit amet, volutpat sed velit. Nullam non neque ipsum.Lorem ipsum dolor sit amet, 
+                                            consectetur adipiscing elit. Morbi euismod diam eu arcu volutpat ut adipiscing sem auctor.
+                                            Vivamus adipiscing lobortis sagittis. Nullam tempus mauris dolor, ac malesuada arcu.
+                                    </p>
+                                    <a>Read More</a>
                                 </div>
                             </div>
                         </div>

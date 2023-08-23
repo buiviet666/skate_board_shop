@@ -6,6 +6,7 @@
     height: 100%;
 }
 
+
 /* ABOUT US */
 .about-us {
     float: left;
@@ -20,6 +21,15 @@
     padding: 0;
     position: relative;
     background-color: #ffff;
+}
+
+.about-us .about_container_parapart_one {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 20px;
+    line-height: 1.7;
+    letter-spacing: 0;
 }
 
 
