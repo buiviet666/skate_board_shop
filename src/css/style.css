@@ -436,6 +436,7 @@ body {
 }
 /* END MAIN RIGHT CONTENT FOOTER */
 
+
 /* MAIN RIGHT CONTENT */
 .right_content_position .position_content_site {
     background-size: cover;
@@ -513,6 +514,8 @@ body {
     background-repeat: no-repeat;
     background-position: center right;
 }
+/* END MAIN RIGHT CONTENT */
+
 
 
 /* btn hover */
