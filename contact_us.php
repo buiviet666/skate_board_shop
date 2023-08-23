@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="src/css/nomalize.css">
     <link rel='stylesheet' type='text/css' href='src/css/style.css'/>
     <link rel="stylesheet" href="src/css/media.css">
+    <link rel="stylesheet" href="src/css/components.css">
     <title>Skateboard life</title>
     <link rel="shortcut icon" href="./src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,8 +27,49 @@
         <div class = "main_right_content">
             <div class = "right_content_position">
                 <!-- main content -->
-                
-
+                <div class="contact_us">
+                    <div class="ggmap">
+                        <div class="mapouter">
+                            <div class="gmap_canvas">
+                                <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=1000&amp;height=600&amp;hl=en&amp;q=Ha Noi&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="get_in_text">GET IN TOUCH</h2>
+                        <form class="form_contact">
+                                <input type="text" placeholder="Name" class="txt_info" autocapitalize="word">
+                                <input type="email" placeholder="Email" class="txt_info" autocapitalize="off" autocorrect="off">
+                                <textarea placeholder="Message" class="txt_info" cols="30" rows="10"></textarea>
+                                <button type="submit" class="bt_submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="h1_ins">Follow on Instargram</h1>
+                    <div class="group_logo">
+                        <div class="logo_img">
+                            <a href="#">
+                                <img src="src/img/inslogo"></img>
+                            </a>
+                        </div>
+                        <div class="logo_img">
+                            <a href="#">
+                                <img src="src/img/inslogo"></img>
+                            </a>
+                        </div>
+                        <div class="logo_img">
+                            <a href="#">
+                                <img src="src/img/inslogo"></img>
+                            </a>
+                        </div>
+                        <div class="logo_img">
+                            <a href="#">
+                                <img src="src/img/inslogo"></img>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <!-- footer content -->
                 <?php include "component_footer.php" ?>
             </div>
