@@ -21,9 +21,10 @@
     padding: 0;
     position: relative;
     background-color: #ffff;
+    margin-bottom: 100px;
 }
 
-.about-us .about_container_parapart_one {
+.about-us .about_container_parapart {
     display: inline-block;
     vertical-align: middle;
     width: 100%;
@@ -32,7 +33,114 @@
     letter-spacing: 0;
 }
 
+.about-us .about_container_parapart .about_parapart_img {
+    width: 50%;
+    margin: 0;
+    float: left;
+    min-height: 1px;
+    vertical-align: top;
+}
 
+.about-us .about_container_parapart .about_parapart_img img {
+    max-width: 100%;
+    display: block;
+}
+
+.about-us .about_container_parapart .about_parapart_text {
+    padding: 0 70px;
+}
+
+.about-us .about_parapart_img .about_parapart_text h3 {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 35px;
+}
+
+.about-us .about_parapart_img .about_parapart_text p {
+    padding-bottom: 10px;
+    margin: 0 0 15px 0;
+    font-weight: 300;
+}
+
+.about-us .about_parapart_img .btn_about {
+    transition: all .15s ease-in-out 0.2s;
+    border: 1px solid black;
+    background: none;
+    color: #000000;
+    font-size: 16px;
+    padding: 10px 34px;
+}
+
+.about-us .about_parapart_img .btn_about:hover {
+    background-color: #05C59C;
+    border: none;
+    color: #ffff;
+}
+
+.about-us .about-section .about-us_grid_item {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    box-sizing: border-box;
+    display: table-cell;
+    vertical-align: middle;
+    transition: all 0.4s ease-in-out;
+    width: 25%;
+    margin: 0;
+    padding: 0 5px;
+}
+
+.about-us .about-section .about-us_grid_item img {
+    max-width: 100%;
+    display: block;
+}
+
+.about-us .about-section .about-us_hover_slitop {
+    position: absolute;
+    bottom: 26%;
+    margin: auto;
+    left: auto;
+    right: -20%;
+    display: table-cell;
+    width: 100%;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    -webkit-transform: rotate(90deg) translateY(-50%);
+}
+
+.about-us .about-section .about-us_hover_slitop span {
+    float: right;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #fff;
+}
+
+.about-us .about-section .about_overlayout {
+    background-color: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+.about-us .about-section .about_item_parapart3 {
+    width: 100%;
+    font-size: 20px;
+    line-height: 1.7;
+    letter-spacing: 0;
+    float: left;
+    min-height: 1px;
+    vertical-align: top;
+}
 /* END ABOUT US */
 
 /* CONTACT US */

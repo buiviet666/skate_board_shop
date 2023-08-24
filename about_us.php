@@ -29,12 +29,12 @@
                 <!-- main content -->
                 <div class="about-us">
                     <div class="about-section">
-                        <div class="about_container_parapart_one">
+                        <div class="about_container_parapart">
                             <div class="about_parapart_img">
                                 <img src="./src/img/abt_welcome_1.jpg">
                             </div>
-                            <div>
-                                <div>
+                            <div class="about_parapart_img">
+                                <div class="about_parapart_text">
                                     <h3>Multipurpose store</h3>
                                     <p>
                                         There are many variations of passages of Lorem Ipsum available, but the majority 
@@ -46,82 +46,72 @@
                                             consectetur adipiscing elit. Morbi euismod diam eu arcu volutpat ut adipiscing sem auctor.
                                             Vivamus adipiscing lobortis sagittis. Nullam tempus mauris dolor, ac malesuada arcu.
                                     </p>
-                                    <a>Read More</a>
+                                    <a class="btn btn_about">Read More</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="about-section">
-                        <div>
-                            <div>
-                                <div class="">
-                                    item1
-                                    <img>
-                                    <div>
-                                        <span>STYLE</span>
-                                    </div>
+                        <div class="about_container_parapart">
+                            <div class="about-us_grid_item">
+                                <img src="./src/img/about_1.jpg">
+                                <div class="about-us_hover_slitop">
+                                    <span>STYLE</span>
                                 </div>
-                                <div class="">
-                                    item2
-                                    <img>
-                                    <div>
-                                        <span>COMFORT</span>
-                                    </div>
+                            </div>
+                            <div class="about-us_grid_item">
+                                <img src="src/img/about_2.jpg">
+                                <div class="about-us_hover_slitop">
+                                    <span>COMFORT</span>
                                 </div>
-                                <div class="">
-                                    item3
-                                    <img>
-                                    <div>
-                                        <span>PRECISION</span>
-                                    </div>
+                            </div>
+                            <div class="about-us_grid_item">
+                                <img src="src/img/about_3.jpg">
+                                <div class="about-us_hover_slitop">
+                                    <span>PRECISION</span>
                                 </div>
-                                <div class="">
-                                    item4
-                                    <img>
-                                    <div>
-                                        <span>DURABLE</span>
-                                    </div>
+                            </div>
+                            <div class="about-us_grid_item">
+                                <img src="src/img/about_4.jpg">
+                                <div class="about-us_hover_slitop">
+                                    <span>DURABLE</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="about-section">
-                        <div>
-                            <div></div>
+                        <div class="about_overlayout"></div>
+                        <div class="about_item_parapart3">
                             <div>
                                 <div>
                                     <div>
-                                        <div>
-                                            <div>
-                                                <i class="fa-regular fa-gem"></i>
-                                            </div>
-                                            <h5>TOTALLY RESPONSIVE</h5>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse urna nibh, 
-                                                viverra non, semper suscipit, posuere a, pede.
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <div>
-                                                <i class="fa-solid fa-graduation-cap"></i>
-                                            </div>
-                                            <h5>DIFFERENT HEADER TYPES</h5>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse urna nibh, 
-                                                viverra non, semper suscipit, posuere a, pede.
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <div>
-                                                <i class="fa-solid fa-headphones"></i>
-                                            </div>
-                                            <h5>HIGHLY CUSTOMIZABLE</h5>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse urna nibh, 
-                                                viverra non, semper suscipit, posuere a, pede.
-                                            </p>
-                                        </div>
+                                        <i class="fa-regular fa-gem"></i>
                                     </div>
+                                    <h5>TOTALLY RESPONSIVE</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse urna nibh, 
+                                        viverra non, semper suscipit, posuere a, pede.
+                                    </p>
+                                </div>
+                                <div>
+                                    <div>
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                    </div>
+                                    <h5>DIFFERENT HEADER TYPES</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse urna nibh, 
+                                        viverra non, semper suscipit, posuere a, pede.
+                                    </p>
+                                </div>
+                                <div>
+                                    <div>
+                                        <i class="fa-solid fa-headphones"></i>
+                                    </div>
+                                    <h5>HIGHLY CUSTOMIZABLE</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse urna nibh, 
+                                        viverra non, semper suscipit, posuere a, pede.
+                                    </p>
                                 </div>
                             </div>
                         </div>
