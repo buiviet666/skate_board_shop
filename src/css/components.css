@@ -21,7 +21,11 @@
     padding: 0;
     position: relative;
     background-color: #ffff;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
+}
+
+.about-us .about_img_background {
+    background-image: url(../img/mobile_app_section_bg_image.jpg);
 }
 
 .about-us .about_container_parapart {
@@ -31,6 +35,7 @@
     font-size: 20px;
     line-height: 1.7;
     letter-spacing: 0;
+    height: 650px;
 }
 
 .about-us .about_container_parapart .about_parapart_img {
@@ -65,7 +70,7 @@
     font-weight: 300;
 }
 
-.about-us .about_parapart_img .btn_about {
+.about-us .btn_about {
     transition: all .15s ease-in-out 0.2s;
     border: 1px solid black;
     background: none;
@@ -74,7 +79,7 @@
     padding: 10px 34px;
 }
 
-.about-us .about_parapart_img .btn_about:hover {
+.about-us .btn_about:hover {
     background-color: #05C59C;
     border: none;
     color: #ffff;
@@ -136,10 +141,258 @@
     width: 100%;
     font-size: 20px;
     line-height: 1.7;
-    letter-spacing: 0;
+    height: 495px;
+    vertical-align: top;
+    padding-top: 26px;
+}
+
+.about-us .about-section .about_item_card {
+    margin-left: 0;
+    padding: 0 20px;
+    width: 28%;
+    float: left;
+    /* width: 100%; */
+    position: relative;
+    margin-right: 2%;
+    text-align: center !important;
+}
+
+.about-us .about-section .about_icon_card {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.about-us .about-section .about_icon_card i {
+    background: none;
+    height: auto;
+    line-height: 70px;
+    position: relative;
+    width: auto;
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.about-us .about-section .about_item_card h5 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.about-us .about-section .about_item_card p {
+    padding: 0 20px;
+    color: #ffffff;
+    margin: 0 0 15px 0;
+    font-weight: 300;
+}
+
+.about-us .about-section .about_container_parapart h3 {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 35px;
+}
+
+.about-us .about-section .about_ourteam_para {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.about-us .about-section .about_container_text {
+    display: block;
+    float: left;
+    clear: both;
+    padding: 0px 12% 30px 12%;
+    -webkit-border-radius: 0px 5px 5px 5px;
+    margin: -1px 0px 0px 0px;
+}
+
+.about-us .about-section .about_container_text p {
+    padding-bottom: 10px;
+    margin: 0 0 15px 0;
+}
+
+.about-us .about-section .about_leader_team {
+    list-style: none;
+    padding: 0;
+}
+
+.about-us .about-section .about_leader_team li {
+    width: 25%;
+    margin: 0;
     float: left;
     min-height: 1px;
     vertical-align: top;
+}
+
+.about-us .about_leader_team .about_thumb {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.about-us .about_thumb .about_thumb_img {
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 0px;
+    font-family: Stroke-Gap-Icons;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.about-us .about_thumb_img img {
+    max-width: 100%;
+    display: block;
+    border: 0 none;
+}
+
+.about-us .about_leader_team .about_detail_card {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    right: 0;
+    /* opacity: 0; */
+}
+
+.about-us .about_detail_card h4 {
+    font-size: 24px;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+}
+
+.about-us .about_detail_card h5 {
+    margin-bottom: 10px;
+}
+
+.about-us .about_leader_team .about_sociation_icon {
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.about-us .about_sociation_icon li {
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.about-us .about_sociation_icon li a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 30px;
+    line-height: 30px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.about-us .about_part4_icon {
+    float: left;
+    text-align: center;
+    width: 100%;
+    padding: 150px 7%;
+    background: #f8f8f8;
+}
+
+.about-us .about_part4_introtext {
+    display: inline-block;
+    text-align: center;
+    background: #ffffff;
+    margin: 0;
+    padding: 70px 70px;
+}
+
+.about-us .about_part4_card {
+    width: 31%;
+    float: left;
+    margin-right: 2%;
+    text-align: center !important;
+    min-height: 1px;
+    vertical-align: top;
+    position: relative;
+}
+
+.about-us .about_icon_wrap {
+    display: inline-block;
+    margin-right: 20px;
+    float: left;
+}
+
+.about-us .about_icon_wrap i {
+    background: none;
+    height: auto;
+    line-height: 70px;
+    position: relative;
+    width: auto;
+    font-size: 50px;
+}
+
+.about-us .about_text_wrap {
+    float: left;
+}
+
+.about-us .about_text_wrap h4 {
+    text-align: left;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #1d1d1d;
+    font-size: 24px;
+    line-height: normal;
+    margin: 0 0 15px;
+}
+
+.about-us .about_text_wrap p {
+    color: #1d1d1d;
+    font-weight: normal;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    margin: 0 0 15px 0;
+}
+
+.about-us .about_part4_main_content {
+    display: inline-block;
+    margin: auto;
+    width: 65%;
+    text-align: center;
+}
+
+.about-us .about_part4_main_content h3 {
+    color: #000;
+    margin: 0 0 20px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.about-us .about_part4_main_content p {
+    margin-bottom: 20px;
+    margin: 0 0 15px;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.7;
+    letter-spacing: 0;
+    font-weight: 300;
 }
 /* END ABOUT US */
 

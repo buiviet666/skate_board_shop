@@ -79,166 +79,238 @@
                             </div>
                         </div>
                     </div>
-                    <div class="about-section">
+                    <div class="about-section about_img_background">
                         <div class="about_overlayout"></div>
                         <div class="about_item_parapart3">
-                            <div>
-                                <div>
-                                    <div>
-                                        <i class="fa-regular fa-gem"></i>
-                                    </div>
-                                    <h5>TOTALLY RESPONSIVE</h5>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse urna nibh, 
-                                        viverra non, semper suscipit, posuere a, pede.
-                                    </p>
+                            <div class="about_item_card">
+                                <div class="about_icon_card">
+                                    <i class="fa-regular fa-gem"></i>
                                 </div>
-                                <div>
-                                    <div>
-                                        <i class="fa-solid fa-graduation-cap"></i>
-                                    </div>
-                                    <h5>DIFFERENT HEADER TYPES</h5>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse urna nibh, 
-                                        viverra non, semper suscipit, posuere a, pede.
-                                    </p>
+                                <h5>TOTALLY RESPONSIVE</h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse urna nibh, 
+                                    viverra non, semper suscipit, posuere a, pede.
+                                </p>
+                            </div>
+                            <div class="about_item_card">
+                                <div class="about_icon_card">
+                                    <i class="fa-solid fa-graduation-cap"></i>
                                 </div>
-                                <div>
-                                    <div>
-                                        <i class="fa-solid fa-headphones"></i>
-                                    </div>
-                                    <h5>HIGHLY CUSTOMIZABLE</h5>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse urna nibh, 
-                                        viverra non, semper suscipit, posuere a, pede.
-                                    </p>
+                                <h5>DIFFERENT HEADER TYPES</h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse urna nibh, 
+                                    viverra non, semper suscipit, posuere a, pede.
+                                </p>
+                            </div>
+                            <div class="about_item_card">
+                                <div class="about_icon_card">
+                                    <i class="fa-solid fa-headphones"></i>
                                 </div>
+                                <h5>HIGHLY CUSTOMIZABLE</h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse urna nibh, 
+                                    viverra non, semper suscipit, posuere a, pede.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="about-section">
-                        <div>
-                            <div>
-                                <div>
-                                    <h3>Our Team</h3>
-                                    <div>
-                                        <div>
-                                            <p>
-                                            Nullam ultrices cursus orci id maximus. Etiam ultricies, turpis ac accumsan volutpat, 
-                                            nisi nisi fermentum orci, eu pulvinar justo sapien ut orci. Lorem ipsum dolor sit amet, 
-                                            consectetur adipiscing elit. Sed ut elit vel lectus fringilla molestie ac et turpis. Ut 
-                                            sed tempus nisi. In eleifend vel velit nec pulvinar.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <ul>
-                                            <li>
-                                                <div>
-                                                    <div>
-                                                        <img>
-                                                    </div>
-                                                    <div>
-                                                        hover mouse
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    hover item
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div>
-                                                    <div>
-                                                        <img>
-                                                    </div>
-                                                    <div>
-                                                        hover mouse
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    hover item
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div>
-                                                    <div>
-                                                        <img>
-                                                    </div>
-                                                    <div>
-                                                        hover mouse
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    hover item
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div>
-                                                    <div>
-                                                        <img>
-                                                    </div>
-                                                    <div>
-                                                        hover mouse
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    hover item
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    <!-- <div class="about-section">
+                        <div class="about_container_parapart">
+                            <h3>Our Team</h3>
+                            <div class="about_ourteam_para">
+                                <div class="about_container_text">
+                                    <p>
+                                    Nullam ultrices cursus orci id maximus. Etiam ultricies, turpis ac accumsan volutpat, 
+                                    nisi nisi fermentum orci, eu pulvinar justo sapien ut orci. Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing elit. Sed ut elit vel lectus fringilla molestie ac et turpis. Ut 
+                                    sed tempus nisi. In eleifend vel velit nec pulvinar.
+                                    </p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="about-section">
-                        <div>
                             <div>
-                                <div>
-                                    <div>
-                                        <div>
-                                            <i class="fa-solid fa-briefcase"></i>
+                                <ul class="about_leader_team">
+                                    <li>
+                                        <div class="about_thumb">
+                                            <div class="about_thumb_img">
+                                                <img src="src/img/team-1.jpg">
+                                            </div>
+                                            <div class="about_thumb_hover"></div>
                                         </div>
-                                        <div>
-                                            <h4>548</h4>
-                                            <p>
-                                                PROJECT COMPLETED
-                                            </p>
+                                        <div class="about_detail_card">
+                                            <h4>
+                                                <a>
+                                                    name
+                                                </a>
+                                            </h4>
+                                            <h5>description</h5>
+                                            <ul class="about_sociation_icon">
+                                                <li>
+                                                    <a>
+                                                        <i class="fa-brands fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a>
+                                                        <i class="fa-brands fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a>
+                                                        <i class="fa-brands fa-instagram"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
                                         </div>
+                                    </li>
+                                    <li>
+                                        <div class="about_thumb">
+                                            <div class="about_thumb_img">
+                                                <img src="src/img/team-1.jpg">
+                                            </div>
+                                            <div class="about_thumb_hover"></div>
+                                        </div>
+                                        <div class="about_detail_card">
+                                            <h4>
+                                                <a>
+                                                    name
+                                                </a>
+                                            </h4>
+                                            <h5>description</h5>
+                                            <ul class="about_sociation_icon">
+                                                <li>
+                                                    <a>
+                                                        <i class="fa-brands fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a>
+                                                        <i class="fa-brands fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a>
+                                                        <i class="fa-brands fa-instagram"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="about_thumb">
+                                            <div class="about_thumb_img">
+                                                <img src="src/img/team-1.jpg">
+                                            </div>
+                                            <div class="about_thumb_hover"></div>
+                                        </div>
+                                        <div class="about_detail_card">
+                                            <h4>
+                                                <a>
+                                                    name
+                                                </a>
+                                            </h4>
+                                            <h5>description</h5>
+                                            <ul class="about_sociation_icon">
+                                                <li>
+                                                    <a>
+                                                        <i class="fa-brands fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a>
+                                                        <i class="fa-brands fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a>
+                                                        <i class="fa-brands fa-instagram"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="about_thumb">
+                                            <div class="about_thumb_img">
+                                                <img src="src/img/team-1.jpg">
+                                            </div>
+                                            <div class="about_thumb_hover"></div>
+                                        </div>
+                                        <div class="about_detail_card">
+                                            <h4>
+                                                <a>
+                                                    name
+                                                </a>
+                                            </h4>
+                                            <h5>description</h5>
+                                            <ul class="about_sociation_icon">
+                                                <li>
+                                                    <a>
+                                                        <i class="fa-brands fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a>
+                                                        <i class="fa-brands fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a>
+                                                        <i class="fa-brands fa-instagram"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="about-section">
+                        <div class="about_container_parapart" style="height:100%">
+                            <div class="about_part4_icon">
+                                <div class="about_part4_card">
+                                    <div class="about_icon_wrap">
+                                        <i class="fa-solid fa-briefcase"></i>
                                     </div>
-                                    <div>
-                                        <div>
-                                            <i class="fa-regular fa-clock"></i>
-                                        </div>
-                                        <div>
-                                            <h4>1548</h4>
-                                            <p>
-                                                WORKING HOURS
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div>
-                                            <i class="fa-regular fa-star"></i>
-                                        </div>
-                                        <div>
-                                            <h4>748</h4>
-                                            <p>
-                                                POST FEEDBACKS
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <h3>Promo Ads</h3>
+                                    <div class="about_text_wrap">
+                                        <h4>548</h4>
                                         <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.Veritatis et quasi architecto 
-                                        beatae vitae dicta sunt explicabo.Lorem ipsum dolor sit amet, consectetur adipiscing 
-                                        elit.Vivamus adipiscing lobortis sagittis.
+                                            PROJECT COMPLETED
                                         </p>
-                                        <a>View Details</a>
                                     </div>
+                                </div>
+                                <div class="about_part4_card">
+                                    <div class="about_icon_wrap">
+                                        <i class="fa-regular fa-clock"></i>
+                                    </div>
+                                    <div class="about_text_wrap">
+                                        <h4>1548</h4>
+                                        <p>
+                                            WORKING HOURS
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="about_part4_card">
+                                    <div class="about_icon_wrap">
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div class="about_text_wrap">
+                                        <h4>748</h4>
+                                        <p>
+                                            POST FEEDBACKS
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about_part4_introtext">
+                                <div class="about_part4_main_content">
+                                    <h3>Promo Ads</h3>
+                                    <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.Veritatis et quasi architecto 
+                                    beatae vitae dicta sunt explicabo.Lorem ipsum dolor sit amet, consectetur adipiscing 
+                                    elit.Vivamus adipiscing lobortis sagittis.
+                                    </p>
+                                    <a class="btn btn_about">View Details</a>
                                 </div>
                             </div>
                         </div>
