@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/single.css">
     <link rel="stylesheet" href="src/css/nomalize.css">
     <link rel='stylesheet' type='text/css' href='src/css/style.css'/>
     <link rel="stylesheet" href="src/css/media.css">
@@ -26,8 +27,52 @@
         <div class = "main_right_content">
             <div class = "right_content_position">
                 <!-- main content -->
-                
-
+                    <div class="part1">
+                        <div class="img_b1">
+                            <img src="src/img/blog1.jpg" class="imgblog1">
+                            <div class="part2">
+                                <div class="main_blog_headed">Abadon With Rick McCrank</div>
+                                <div class="main_blog_content">This is date time</div>
+                                <hr>
+                                <div class="main_blog_content">
+                                    This is your store’s blog. You can use it to talk about new product launches, experiences, tips or other news you want your customers to read about. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and for your store’s blog. How do I remove this post?Log in to your store’s admin area then go to the blog section to delete this post.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recent">
+                            <h2>RECENT ARTICLE</h2>
+                            <div class="recent_content">
+                                <div class="contents">
+                                    <img src="src/img/blog1.jpg" class="smallimg">
+                                    <div class="recent_para"> 
+                                        <div class="recent_title">Abadon With Rick McCrank</div>
+                                        <div class="small_content">This is content of blog</div>
+                                    </div>
+                                </div>
+                                <div class="contents">
+                                    <img src="src/img/blog1.jpg" class="smallimg">
+                                    <div class="recent_para"> 
+                                        <div class="recent_title">Abadon With Rick McCrank</div>
+                                        <div class="small_content">This is content of blog</div>
+                                    </div>
+                                </div>
+                                <div class="contents">
+                                    <img src="src/img/blog1.jpg" class="smallimg">
+                                    <div class="recent_para"> 
+                                        <div class="recent_title">Abadon With Rick McCrank</div>
+                                        <div class="small_content">This is content of blog</div>
+                                    </div>
+                                </div>
+                                <div class="contents">
+                                    <img src="src/img/blog1.jpg" class="smallimg">
+                                    <div class="recent_para"> 
+                                        <div class="recent_title">Abadon With Rick McCrank</div>
+                                        <div class="small_content">This is content of blog</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <!-- footer content -->
                 <?php include "component_footer.php" ?>
             </div>

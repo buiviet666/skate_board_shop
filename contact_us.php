@@ -38,10 +38,10 @@
                     <div>
                         <h2 class="get_in_text">GET IN TOUCH</h2>
                         <form class="form_contact">
-                                <input type="text" placeholder="Name" class="txt_info" autocapitalize="word">
-                                <input type="email" placeholder="Email" class="txt_info" autocapitalize="off" autocorrect="off">
-                                <textarea placeholder="Message" class="txt_info" cols="30" rows="10"></textarea>
-                                <button type="submit" class="bt_submit">Send Message</button>
+                            <input type="text" placeholder="Name" class="txt_info" autocapitalize="word">
+                            <input type="email" placeholder="Email" class="txt_info" autocapitalize="off" autocorrect="off">
+                            <textarea placeholder="Message" class="txt_info" cols="30" rows="10"></textarea>
+                            <input type="button" class="bt_submit" value="Send Message">
                         </form>
                     </div>
                 </div>
