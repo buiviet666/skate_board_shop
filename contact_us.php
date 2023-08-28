@@ -45,31 +45,6 @@
                         </form>
                     </div>
                 </div>
-                <div>
-                    <h1 class="h1_ins">Follow on Instargram</h1>
-                    <div class="group_logo">
-                        <div class="logo_img">
-                            <a href="#">
-                                <img src="src/img/inslogo"></img>
-                            </a>
-                        </div>
-                        <div class="logo_img">
-                            <a href="#">
-                                <img src="src/img/inslogo"></img>
-                            </a>
-                        </div>
-                        <div class="logo_img">
-                            <a href="#">
-                                <img src="src/img/inslogo"></img>
-                            </a>
-                        </div>
-                        <div class="logo_img">
-                            <a href="#">
-                                <img src="src/img/inslogo"></img>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 <!-- footer content -->
                 <?php include "component_footer.php" ?>
             </div>
