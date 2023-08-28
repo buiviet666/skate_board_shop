@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="src/css/nomalize.css">
     <link rel='stylesheet' type='text/css' href='src/css/style.css'/>
     <link rel="stylesheet" href="src/css/media.css">
+    <link rel="stylesheet" href="src/css/single.css">
     <title>Skateboard life</title>
     <link rel="shortcut icon" href="./src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,7 +27,316 @@
         <div class = "main_right_content">
             <div class = "right_content_position">
                 <!-- main content -->
-                
+                <div>bread-crumb</div>
+                <div class="shop">
+                    <div>
+                        <div>
+                            <div>
+                                <!-- part 1 -->
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <h1>
+                                                    kết quả lọc
+                                                </h1>
+                                                <span>
+                                                    (372 sản phẩm)
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <label><i>icon</i></label>
+                                                <ul>
+                                                    <li>
+                                                        <span>
+                                                            Mặc định
+                                                        </span>
+                                                        <ul>
+                                                            <li>Mặc định</li>
+                                                            <li>A -> Z</li>
+                                                            <li>Z -> A</li>
+                                                            <li>Giá tăng dần</li>
+                                                            <li>Giá giảm dần</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- part 2 -->
+                                <div>
+                                    <div>
+                                        <!-- list product -->
+                                           <!-- product 1 -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <a>
+                                                        <img>
+                                                    </a>
+                                                    <div>
+                                                        <form>
+                                                            <div>
+                                                                <button>
+                                                                    <i>icon giỏ hàng</i>
+                                                                </button>
+                                                                <a>
+                                                                    <i>icon tăng</i>
+                                                                </a>
+                                                                <a>
+                                                                    <i>icon yêu thích</i>
+                                                                </a>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h3>tên sp</h3>
+                                                    <div>
+                                                        <div>
+                                                            <span>
+                                                                11000 Đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                           <!-- product 2 -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <a>
+                                                        <img>
+                                                    </a>
+                                                    <div>
+                                                        <form>
+                                                            <div>
+                                                                <button>
+                                                                    <i>icon giỏ hàng</i>
+                                                                </button>
+                                                                <a>
+                                                                    <i>icon tăng</i>
+                                                                </a>
+                                                                <a>
+                                                                    <i>icon yêu thích</i>
+                                                                </a>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h3>tên sp</h3>
+                                                    <div>
+                                                        <div>
+                                                            <span>
+                                                                11000 Đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                            <!-- product 3 -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <a>
+                                                        <img>
+                                                    </a>
+                                                    <div>
+                                                        <form>
+                                                            <div>
+                                                                <button>
+                                                                    <i>icon giỏ hàng</i>
+                                                                </button>
+                                                                <a>
+                                                                    <i>icon tăng</i>
+                                                                </a>
+                                                                <a>
+                                                                    <i>icon yêu thích</i>
+                                                                </a>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h3>tên sp</h3>
+                                                    <div>
+                                                        <div>
+                                                            <span>
+                                                                11000 Đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                            <!-- product 4 -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <a>
+                                                        <img>
+                                                    </a>
+                                                    <div>
+                                                        <form>
+                                                            <div>
+                                                                <button>
+                                                                    <i>icon giỏ hàng</i>
+                                                                </button>
+                                                                <a>
+                                                                    <i>icon tăng</i>
+                                                                </a>
+                                                                <a>
+                                                                    <i>icon yêu thích</i>
+                                                                </a>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h3>tên sp</h3>
+                                                    <div>
+                                                        <div>
+                                                            <span>
+                                                                11000 Đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- part 3 -->
+                                <div>
+                                    <div>
+                                        <ul>
+                                            <!-- back -->
+                                            <li>
+                                                <a><<</a>
+                                            </li>
+
+                                            <li>
+                                                <a>1</a>
+                                            </li>
+                                            <li>
+                                                <a>2</a>
+                                            </li>
+                                            <li>
+                                                <a>3</a>
+                                            </li>
+
+                                            <!-- next -->
+                                            <li>
+                                                <a>>></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- Danh mục sản phẩm -->
+                            <div>
+                                <div>
+                                    <h2>
+                                        <span>
+                                            Danh mục
+                                        </span>
+                                    </h2>
+                                </div>
+                                <div>
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <i>icon mũi tên</i>
+                                                <a>Home</a>
+                                            </li>
+                                            <li>
+                                                <i>icon mũi tên</i>
+                                                <a>Skateboard</a>
+                                                    <i>icon mũi tên xuống</i>
+                                                    <ul>
+                                                        <li>ván(số lượng)</li>
+                                                        <li>truck</li>
+                                                        <li>bánh</li>
+                                                        <li>bộ sửa</li>
+                                                    </ul>
+                                            </li>
+                                            <li>
+                                                <i>icon mũi tên</i>
+                                                <a>quần áo</a>
+                                                    <i>icon mũi tên xuống</i>
+                                                    <ul>
+                                                        <li>áo (số lượng)</li>
+                                                        <li>quần (số lượng)</li>
+                                                    </ul>
+                                            </li>
+                                            <li>
+                                                <i>icon mũi tên</i>
+                                                <a>phụ kiện</a>
+                                                    <i>icon mũi tên xuống</i>
+                                                    <ul>
+                                                        <li>balo (số lượng)</li>
+                                                        <li>giày (số lượng)</li>
+                                                    </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Danh mục nhà sản xuất -->
+                            <div>
+                                <div>
+                                    <div>
+                                        <h2>
+                                            <span>nhà sản xuất</span>
+                                        </h2>
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <span>
+                                                    <label>
+                                                        <input>
+                                                        "nike"
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <label>
+                                                        <input>
+                                                        "addidas"
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <label>
+                                                        <input>
+                                                        "bug"
+                                                    </label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- footer content -->
                 <?php include "component_footer.php" ?>
