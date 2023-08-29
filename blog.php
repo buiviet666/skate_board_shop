@@ -26,7 +26,9 @@
         <div class = "main_right_content">
             <div class = "right_content_position">
                 <!-- main content -->
-                
+                <div class="blog">
+                    
+                </div>
 
                 <!-- footer content -->
                 <?php include "component_footer.php" ?>
