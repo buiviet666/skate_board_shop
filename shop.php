@@ -49,28 +49,28 @@
                                         <li>
                                             <i class="fa-solid fa-caret-right"></i>
                                             <a>Skateboard</a>
-                                                <i class="shop_down_icon fa-solid fa-chevron-down"></i>
-                                                <ul class="">
-                                                    <li>ván(số lượng)</li>
-                                                    <li>truck</li>
-                                                    <li>bánh</li>
-                                                    <li>bộ sửa</li>
-                                                </ul>
+                                            <i class="shop_down_icon fa-solid fa-chevron-down"></i>
+                                            <ul class="shop_dropdown-menu">
+                                                <li>ván(số lượng)</li>
+                                                <li>truck</li>
+                                                <li>bánh</li>
+                                                <li>bộ sửa</li>
+                                            </ul>
                                         </li>
                                         <li>
                                             <i class="fa-solid fa-caret-right"></i>
-                                            <a>quần áo</a>
-                                                <i class="fa-solid fa-chevron-down"></i>
-                                                <ul>
+                                            <a>Quần áo</a>
+                                                <i class="shop_down_icon fa-solid fa-chevron-down"></i>
+                                                <ul class="shop_dropdown-menu">
                                                     <li>áo (số lượng)</li>
                                                     <li>quần (số lượng)</li>
                                                 </ul>
                                         </li>
                                         <li>
                                             <i class="fa-solid fa-caret-right"></i>
-                                            <a>phụ kiện</a>
-                                                <i class="fa-solid fa-chevron-down"></i>
-                                                <ul>
+                                            <a>Phụ kiện</a>
+                                                <i class="shop_down_icon fa-solid fa-chevron-down"></i>
+                                                <ul class="shop_dropdown-menu">
                                                     <li>balo (số lượng)</li>
                                                     <li>giày (số lượng)</li>
                                                 </ul>
@@ -80,51 +80,73 @@
                             </div>
 
                             <!-- Danh mục nhà sản xuất -->
-                            <div>
-                                <div>
-                                    <div>
-                                        <h2>
-                                            <span>nhà sản xuất</span>
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <ul>
-                                            <li>
-                                                <span>
-                                                    <label>
-                                                        <input>
-                                                        "nike"
-                                                    </label>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <label>
-                                                        <input>
-                                                        "addidas"
-                                                    </label>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <label>
-                                                        <input>
-                                                        "bug"
-                                                    </label>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            <div style="margin-bottom: 40px;">
+                                <div class="shop_category_tittle">
+                                    <h2>
+                                        <span>nhà sản xuất</span>
+                                    </h2>
+                                </div>
+                                <div class="shop_category_content">
+                                    <ul class="shop_manufac_product">
+                                        <li>
+                                            <span>
+                                                <label for="txt_manuf">
+                                                    <input type="checkbox" id="txt_manuf">
+                                                    nike
+                                                </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+                                                <label for="txt">
+                                                    <input type="checkbox" id="txt">
+                                                    addidas
+                                                </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+                                                <label for="txt_manuf">
+                                                    <input type="checkbox" id="txt_manuf">
+                                                    bug
+                                                </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+                                                <label for="txt_manuf">
+                                                    <input type="checkbox" id="txt_manuf">
+                                                    bug
+                                                </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+                                                <label for="txt_manuf">
+                                                    <input type="checkbox" id="txt_manuf">
+                                                    bug
+                                                </label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+                                                <label for="txt_manuf">
+                                                    <input type="checkbox" id="txt_manuf">
+                                                    bug
+                                                </label>
+                                            </span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="shop_main_right shop_container">
                             <div>
                                 <!-- part 1 -->
-                                <div>
-                                    <div>
-                                        <div>
-                                            <div>
+                                <div class="shop_tittle_content_container">
+                                    <div class="shop_flex_title_sort">
+                                        <div class="shop_main_content_title">
+                                            <div style="display:flex; align-items: center;">
                                                 <h1>
                                                     kết quả lọc
                                                 </h1>
@@ -133,20 +155,43 @@
                                                 </span>
                                             </div>
                                         </div>
-                                        <div>
+                                        <div class="shop_main_content_title">
                                             <div>
-                                                <label><i>icon</i></label>
-                                                <ul>
-                                                    <li>
+                                                <!-- <label>
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </label> -->
+                                                <ul class="shop_sort_by_wat">
+                                                    <li class="shop_size_text">
                                                         <span>
-                                                            Mặc định
+                                                            Sắp xếp theo
                                                         </span>
-                                                        <ul>
-                                                            <li>Mặc định</li>
-                                                            <li>A -> Z</li>
-                                                            <li>Z -> A</li>
-                                                            <li>Giá tăng dần</li>
-                                                            <li>Giá giảm dần</li>
+                                                        <i class="fa-solid fa-chevron-down"></i>
+                                                        <ul class="shop_sort_down">
+                                                            <li>
+                                                                <a>
+                                                                    Mặc định
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a>
+                                                                    A -> Z
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a>
+                                                                    Z -> A
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a>
+                                                                    Giá tăng dần
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a>
+                                                                    Giá giảm dần
+                                                                </a>
+                                                            </li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -157,35 +202,37 @@
 
                                 <!-- part 2 -->
                                 <div>
-                                    <div>
+                                    <div class="shop_card_container">
                                         <!-- list product -->
-                                           <!-- product 1 -->
-                                        <div>
-                                            <div>
-                                                <div>
-                                                    <a>
-                                                        <img>
+                                        <!-- product 1 -->
+                                        <div class="shop_all_item">
+                                            <div class="shop_item_box">
+                                                <div class="shop_item_thumbnail">
+                                                    <a href="" class="shop_item_img">
+                                                        <img src="src/img/noimage.gif">
                                                     </a>
-                                                    <div>
-                                                        <form>
+                                                    <div class="shop_hover_item clear_fix">
+                                                        <form class="shop_form_mini_card">
                                                             <div>
-                                                                <button>
-                                                                    <i>icon giỏ hàng</i>
+                                                                <button class="shop_icon_minicss hover_green_icon">
+                                                                    <i class="fa-solid fa-cart-shopping"></i>
                                                                 </button>
-                                                                <a>
-                                                                    <i>icon tăng</i>
+                                                                <a style="display: inline-block;" class="shop_icon_minicss hover_green_icon">
+                                                                    <i class="fa-solid fa-magnifying-glass"></i>
                                                                 </a>
-                                                                <a>
-                                                                    <i>icon yêu thích</i>
+                                                                <a style="display: inline-block;" class="shop_icon_minicss hover_pink_icon">
+                                                                    <i class="fa-solid fa-heart"></i>
                                                                 </a>
                                                             </div>
                                                         </form>
                                                     </div>
                                                 </div>
-                                                <div>
-                                                    <h3>tên sp</h3>
-                                                    <div>
-                                                        <div>
+                                                <div class="shop_item_content">
+                                                    <h3>
+                                                        <a>tên sp</a>
+                                                    </h3>
+                                                    <div class="shop_item_price">
+                                                        <div class="shop_special_price">
                                                             <span>
                                                                 11000 Đ
                                                             </span>
@@ -195,14 +242,14 @@
                                             </div>
                                         </div>
 
-                                           <!-- product 2 -->
-                                        <div>
-                                            <div>
-                                                <div>
+                                        <!-- product 2 -->
+                                        <div class="shop_all_item">
+                                            <div class="shop_item_box">
+                                                <div class="shop_item_thumbnail">
                                                     <a>
                                                         <img>
                                                     </a>
-                                                    <div>
+                                                    <div class="shop_hover_item">
                                                         <form>
                                                             <div>
                                                                 <button>
@@ -218,10 +265,10 @@
                                                         </form>
                                                     </div>
                                                 </div>
-                                                <div>
+                                                <div class="shop_item_content">
                                                     <h3>tên sp</h3>
-                                                    <div>
-                                                        <div>
+                                                    <div class="shop_item_price">
+                                                        <div class="shop_special_price">
                                                             <span>
                                                                 11000 Đ
                                                             </span>
@@ -232,13 +279,13 @@
                                         </div>
 
                                             <!-- product 3 -->
-                                        <div>
-                                            <div>
-                                                <div>
+                                            <div class="shop_all_item">
+                                            <div class="shop_item_box">
+                                                <div class="shop_item_thumbnail">
                                                     <a>
                                                         <img>
                                                     </a>
-                                                    <div>
+                                                    <div class="shop_hover_item">
                                                         <form>
                                                             <div>
                                                                 <button>
@@ -254,10 +301,10 @@
                                                         </form>
                                                     </div>
                                                 </div>
-                                                <div>
+                                                <div class="shop_item_content">
                                                     <h3>tên sp</h3>
-                                                    <div>
-                                                        <div>
+                                                    <div class="shop_item_price">
+                                                        <div class="shop_special_price">
                                                             <span>
                                                                 11000 Đ
                                                             </span>
@@ -268,13 +315,13 @@
                                         </div>
 
                                             <!-- product 4 -->
-                                        <div>
-                                            <div>
-                                                <div>
+                                            <div class="shop_all_item">
+                                            <div class="shop_item_box">
+                                                <div class="shop_item_thumbnail">
                                                     <a>
                                                         <img>
                                                     </a>
-                                                    <div>
+                                                    <div class="shop_hover_item">
                                                         <form>
                                                             <div>
                                                                 <button>
@@ -290,10 +337,82 @@
                                                         </form>
                                                     </div>
                                                 </div>
-                                                <div>
+                                                <div class="shop_item_content">
                                                     <h3>tên sp</h3>
-                                                    <div>
-                                                        <div>
+                                                    <div class="shop_item_price">
+                                                        <div class="shop_special_price">
+                                                            <span>
+                                                                11000 Đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                            <!-- product 5 -->
+                                            <div class="shop_all_item">
+                                            <div class="shop_item_box">
+                                                <div class="shop_item_thumbnail">
+                                                    <a>
+                                                        <img>
+                                                    </a>
+                                                    <div class="shop_hover_item">
+                                                        <form>
+                                                            <div>
+                                                                <button>
+                                                                    <i>icon giỏ hàng</i>
+                                                                </button>
+                                                                <a>
+                                                                    <i>icon tăng</i>
+                                                                </a>
+                                                                <a>
+                                                                    <i>icon yêu thích</i>
+                                                                </a>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="shop_item_content">
+                                                    <h3>tên sp</h3>
+                                                    <div class="shop_item_price">
+                                                        <div class="shop_special_price">
+                                                            <span>
+                                                                11000 Đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                            <!-- product 6 -->
+                                            <div class="shop_all_item">
+                                            <div class="shop_item_box">
+                                                <div class="shop_item_thumbnail">
+                                                    <a>
+                                                        <img>
+                                                    </a>
+                                                    <div class="shop_hover_item">
+                                                        <form>
+                                                            <div>
+                                                                <button>
+                                                                    <i>icon giỏ hàng</i>
+                                                                </button>
+                                                                <a>
+                                                                    <i>icon tăng</i>
+                                                                </a>
+                                                                <a>
+                                                                    <i>icon yêu thích</i>
+                                                                </a>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="shop_item_content">
+                                                    <h3>tên sp</h3>
+                                                    <div class="shop_item_price">
+                                                        <div class="shop_special_price">
                                                             <span>
                                                                 11000 Đ
                                                             </span>
@@ -303,32 +422,30 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <!-- part 3 -->
-                                <div>
                                     <div>
-                                        <ul>
-                                            <!-- back -->
-                                            <li>
-                                                <a><<</a>
-                                            </li>
+                                        <div>
+                                            <ul class="shop_pagination">
+                                                <!-- back -->
+                                                <li>
+                                                    <a><<</a>
+                                                </li>
 
-                                            <li>
-                                                <a>1</a>
-                                            </li>
-                                            <li>
-                                                <a>2</a>
-                                            </li>
-                                            <li>
-                                                <a>3</a>
-                                            </li>
+                                                <li>
+                                                    <a>1</a>
+                                                </li>
+                                                <li>
+                                                    <a>2</a>
+                                                </li>
+                                                <li>
+                                                    <a>3</a>
+                                                </li>
 
-                                            <!-- next -->
-                                            <li>
-                                                <a>>></a>
-                                            </li>
-                                        </ul>
+                                                <!-- next -->
+                                                <li>
+                                                    <a>>></a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
