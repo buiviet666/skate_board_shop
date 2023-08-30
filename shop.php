@@ -29,8 +29,96 @@
                 <!-- main content -->
                 <div>bread-crumb</div>
                 <div class="shop">
-                    <div>
-                        <div>
+                    <div style="display: flex">
+                        <div class="shop_main_left shop_container">
+                            <!-- Danh mục sản phẩm -->
+                            <div style="margin-bottom: 40px;">
+                                <div class="shop_category_tittle">
+                                    <h2>
+                                        <span>
+                                            Danh mục
+                                        </span>
+                                    </h2>
+                                </div>
+                                <div class="shop_category_content">
+                                    <ul>
+                                        <li>
+                                            <i class="fa-solid fa-caret-right"></i>
+                                            <a>Home</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-caret-right"></i>
+                                            <a>Skateboard</a>
+                                                <i class="shop_down_icon fa-solid fa-chevron-down"></i>
+                                                <ul class="">
+                                                    <li>ván(số lượng)</li>
+                                                    <li>truck</li>
+                                                    <li>bánh</li>
+                                                    <li>bộ sửa</li>
+                                                </ul>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-caret-right"></i>
+                                            <a>quần áo</a>
+                                                <i class="fa-solid fa-chevron-down"></i>
+                                                <ul>
+                                                    <li>áo (số lượng)</li>
+                                                    <li>quần (số lượng)</li>
+                                                </ul>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-caret-right"></i>
+                                            <a>phụ kiện</a>
+                                                <i class="fa-solid fa-chevron-down"></i>
+                                                <ul>
+                                                    <li>balo (số lượng)</li>
+                                                    <li>giày (số lượng)</li>
+                                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Danh mục nhà sản xuất -->
+                            <div>
+                                <div>
+                                    <div>
+                                        <h2>
+                                            <span>nhà sản xuất</span>
+                                        </h2>
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <span>
+                                                    <label>
+                                                        <input>
+                                                        "nike"
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <label>
+                                                        <input>
+                                                        "addidas"
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <label>
+                                                        <input>
+                                                        "bug"
+                                                    </label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop_main_right shop_container">
                             <div>
                                 <!-- part 1 -->
                                 <div>
@@ -245,96 +333,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <!-- Danh mục sản phẩm -->
-                            <div>
-                                <div>
-                                    <h2>
-                                        <span>
-                                            Danh mục
-                                        </span>
-                                    </h2>
-                                </div>
-                                <div>
-                                    <div>
-                                        <ul>
-                                            <li>
-                                                <i>icon mũi tên</i>
-                                                <a>Home</a>
-                                            </li>
-                                            <li>
-                                                <i>icon mũi tên</i>
-                                                <a>Skateboard</a>
-                                                    <i>icon mũi tên xuống</i>
-                                                    <ul>
-                                                        <li>ván(số lượng)</li>
-                                                        <li>truck</li>
-                                                        <li>bánh</li>
-                                                        <li>bộ sửa</li>
-                                                    </ul>
-                                            </li>
-                                            <li>
-                                                <i>icon mũi tên</i>
-                                                <a>quần áo</a>
-                                                    <i>icon mũi tên xuống</i>
-                                                    <ul>
-                                                        <li>áo (số lượng)</li>
-                                                        <li>quần (số lượng)</li>
-                                                    </ul>
-                                            </li>
-                                            <li>
-                                                <i>icon mũi tên</i>
-                                                <a>phụ kiện</a>
-                                                    <i>icon mũi tên xuống</i>
-                                                    <ul>
-                                                        <li>balo (số lượng)</li>
-                                                        <li>giày (số lượng)</li>
-                                                    </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Danh mục nhà sản xuất -->
-                            <div>
-                                <div>
-                                    <div>
-                                        <h2>
-                                            <span>nhà sản xuất</span>
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <ul>
-                                            <li>
-                                                <span>
-                                                    <label>
-                                                        <input>
-                                                        "nike"
-                                                    </label>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <label>
-                                                        <input>
-                                                        "addidas"
-                                                    </label>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <label>
-                                                        <input>
-                                                        "bug"
-                                                    </label>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 
