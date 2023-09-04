@@ -23,15 +23,7 @@
     <div id = "main">
         <?php include "component_sidebar_left.php" ?>    
 
-        <div class = "main_right_content">
-            <div class = "right_content_position">
-                <!-- main content -->
-                
-
-                <!-- footer content -->
-                <?php include "component_footer.php" ?>
-            </div>
-        </div>
+        <?php include "component_content_right.php" ?>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.17/fullpage.min.js" integrity="sha512-zAHJKGyoPf2Y20Wi4uo32sa/vSvwKfY4tYUt6gJfmkA79X0wt5ZfaxL5GqJ5cMnmvGslWi5PKTo51rHRZqYbJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
