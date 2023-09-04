@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="src/css/nomalize.css">
     <link rel='stylesheet' type='text/css' href='src/css/style.css'/>
     <link rel="stylesheet" href="src/css/media.css">
+    <link rel="stylesheet" href="src/css/inpage.css">
     <title>Skateboard life</title>
     <link rel="shortcut icon" href="./src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,7 +27,23 @@
         <div class = "main_right_content">
             <div class = "right_content_position">
                 <!-- main content -->
-                
+                <div class="inpage">
+                    <h3>Sign In</h3>
+                    <div class="inpage_container">
+                        <form class="inpage_form">
+                            <input type="" placeholder="tên của b">
+                            <input placeholder="tên tài khoản">
+                            <input placeholder="mật khẩu">
+                            <input placeholder="số điện thoại">
+                            <input placeholder="email">
+
+                            <p>
+                                <input class="btn_inpage" type="submit" value="tạo">
+                            </p>
+                            <a class="back_next" href="index.php">trở lại trang chủ</a>
+                        </form>
+                    </div>
+                </div>
 
                 <!-- footer content -->
                 <?php include "component_footer.php" ?>

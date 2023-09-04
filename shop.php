@@ -229,7 +229,7 @@
                                                 </div>
                                                 <div class="shop_item_content">
                                                     <h3>
-                                                        <a>tên sp</a>
+                                                        <a href="single_product.php">tên sp</a>
                                                     </h3>
                                                     <div class="shop_item_price">
                                                         <div class="shop_special_price">

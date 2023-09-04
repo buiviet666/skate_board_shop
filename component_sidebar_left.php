@@ -25,7 +25,7 @@
 
             <!-- menu categories -->
             <div class="grid--full header_menu_categories">
-                <div class ="wrapper">
+                <div class ="index_list_menu">
                     <div>
                         <ul class = "header_menu_list">
                             <li><a href="index.php">HOME</a></li>
@@ -47,7 +47,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href = "#">
+                    <a href = "customer/cart.php">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
                 </li>
