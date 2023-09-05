@@ -43,7 +43,8 @@
                                 <span>29 Aug 2016    ram m</span>
                             </li>
                         </ul>
-                        <hr>
+                        <hr class="width">
+                        <!-- <hr> -->
                         <div class="desc">
                             This is your store’s blog. You can use it to talk about new product launches, experiences, tips or other news you want your customers to read about. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and for your store’s blog. How do I remove this post?Log in to your store’s admin area then go to the blog section to delete this post.
                         </div>
