@@ -30,25 +30,30 @@
                 <h3 style="text-align:center">
                     News    
                 </h3>
-                <div class="blog">
-                    <img src="https://skateboards-demo.myshopify.com/cdn/shop/articles/blog-2_2035fd6d-8799-4aaf-874f-a4261e944db5.jpg?v=1472732581" alt="Abandon with Rick McCrank" class="shoe">
-                </div>
-                <div class="grid_item">
+                <div class="blog_image1">
+                    <div class="blog">
+                        <img src="https://skateboards-demo.myshopify.com/cdn/shop/articles/blog-2_2035fd6d-8799-4aaf-874f-a4261e944db5.jpg?v=1472732581" alt="Abandon with Rick McCrank" class="shoe">
+                    </div>
                     <div class="blog-info">
-                    <h3>
-                        <a href="https://skateboards-demo.myshopify.com/blogs/news/abandon-with-rick-mccrank">Abadon with Rick McCrank</a>
-                    </h3>
-                    <ul class="blog-date">
-                        <li>
-                            <span>29 Aug 2016</span>
-                        </li>
-                        <li>ram m</li>
-                    </ul>
-                    <p class="desc">
-                    This is your store’s blog. You can use it to talk about new product launches, experiences, tips or other news you want your customers to read about. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and for your store’s blog. How do I remove this post?Log in to your store’s admin area then go to the blog section to delete this post.
-                    </p>
+                        <h3>
+                            <a href= "#" class="font_size">Abadon with Rick McCrank</a>
+                        </h3>
+                        <ul class="blog-date">
+                            <li>
+                                <span>29 Aug 2016    ram m</span>
+                            </li>
+                        </ul>
+                        <hr>
+                        <div class="desc">
+                            This is your store’s blog. You can use it to talk about new product launches, experiences, tips or other news you want your customers to read about. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and for your store’s blog. How do I remove this post?Log in to your store’s admin area then go to the blog section to delete this post.
+                        </div>
+                        <br>
+                        <!-- <a href="#" class="btn">
+                            <span>Read More</span>
+                        </a> -->
                     </div>
                 </div>
+
                 <!-- footer content -->
                 <?php include "component_footer.php" ?>
             </div>
