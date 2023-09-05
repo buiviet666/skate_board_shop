@@ -30,15 +30,15 @@
                 <div class="inpage">
                     <h3>Sign In</h3>
                     <div class="inpage_container">
-                        <form class="inpage_form">
-                            <input type="" placeholder="tên của b">
-                            <input placeholder="tên tài khoản">
-                            <input placeholder="mật khẩu">
-                            <input placeholder="số điện thoại">
-                            <input placeholder="email">
+                        <form class="inpage_form" action="process_signin.php" method="post">
+                            <input type="text" placeholder="Your Name" name="name_user">
+                            <input type="text" placeholder="User Name" name="login_user">
+                            <input type="password" placeholder="Password" name="password_user">
+                            <input type="number" placeholder="Phone Number" name="phone_user">
+                            <input type="email" placeholder="Email Address" name="email_user">
 
                             <p>
-                                <input class="btn_inpage" type="submit" value="tạo">
+                                <input class="btn_inpage" type="submit" value="Create">
                             </p>
                             <a class="back_next" href="index.php">trở lại trang chủ</a>
                         </form>

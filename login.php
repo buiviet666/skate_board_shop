@@ -30,13 +30,16 @@
                 <div class="inpage">
                     <h3>Login In</h3>
                     <div class="inpage_container">
-                        <form class="inpage_form">
-                            <input placeholder="email">
-                            <input placeholder="mật khẩu">
+                        <form class="inpage_form" action="process_login.php" method="post">
+                            <input type="text" placeholder="Username" name="login_user">
+                            <input type="text" placeholder="Password" name="password_user">
+
                             <a class="inpage_link" href="#">Forgot your password?</a>
+                            
                             <p>
-                                <input class="btn_inpage" type="submit" value="Đăng nhập">
+                                <input class="btn_inpage" type="submit" value="Login">
                             </p>
+
                             <a class="inpage_link" href="signin.php">Đăng ký tài khoản</a>
                             <a class="back_next" href="index.php">trở lại trang chủ</a>
                         </form>

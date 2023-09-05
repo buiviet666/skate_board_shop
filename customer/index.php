@@ -1,3 +1,13 @@
+<?php
+    session_start();
+
+    if (empty($_SESSION['id_user'])) {
+
+        header('location: ../index.php');
+    } else {
+        echo 'hi';
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
