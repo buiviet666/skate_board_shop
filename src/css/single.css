@@ -660,7 +660,7 @@
     margin-bottom: 0;
     z-index: -1;
 }
-.h3{
+.blog_h3{
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -708,12 +708,12 @@
     /* float: right; */
     font-size: 24px;
 }
-hr{
+/* hr{
     width:500px;
     padding-right: 20px;
 
-}
-li{
+} */
+.blog_day{
     padding-top: 30px;
     padding-right: 50px;
 }
@@ -726,7 +726,7 @@ li{
     background: none;
     color: #000000;
 }
-.width{
+.blog_width{
     width: 700px;
     padding-right: 20px;
 }
