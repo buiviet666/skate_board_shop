@@ -40,11 +40,11 @@
                                         There are many variations of passages of Lorem Ipsum available, but the majority 
                                         have suffered alteration in some form, by injected humour, or randomised words 
                                         which don't look even slightly believable. Lorem Ipsum available, but the majority
-                                            have suffered alteration in some form. Vivamus adipiscing lobortis sagittis. Nullam 
-                                            tempus mauris dolor, ac malesuada arcu. Praesent dolor quam, tincidunt in sollicitudin 
-                                            sit amet, volutpat sed velit. Nullam non neque ipsum.Lorem ipsum dolor sit amet, 
-                                            consectetur adipiscing elit. Morbi euismod diam eu arcu volutpat ut adipiscing sem auctor.
-                                            Vivamus adipiscing lobortis sagittis. Nullam tempus mauris dolor, ac malesuada arcu.
+                                        have suffered alteration in some form. Vivamus adipiscing lobortis sagittis. Nullam 
+                                        tempus mauris dolor, ac malesuada arcu. Praesent dolor quam, tincidunt in sollicitudin 
+                                        sit amet, volutpat sed velit. Nullam non neque ipsum.Lorem ipsum dolor sit amet, 
+                                        consectetur adipiscing elit. Morbi euismod diam eu arcu volutpat ut adipiscing sem auctor.
+                                        Vivamus adipiscing lobortis sagittis. Nullam tempus mauris dolor, ac malesuada arcu.
                                     </p>
                                     <a class="btn btn_about">Read More</a>
                                 </div>
