@@ -1,3 +1,13 @@
+<?php
+    session_start();
+
+    if (empty($_SESSION['id_user'])) {
+        header('location:login.php');
+    } else {
+        echo 'hi';
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +65,7 @@
                 <div class="side-wrapper">
                     <div class="side-title">SETTING</div>
                     <div class="side-menu">
-                        <a class="sidebar-link" href="#">
+                        <a class="sidebar-link" href="process_logout_admin.php">
                             <i class="db_icon fa-solid fa-gear"></i>
                             Log Out
                         </a>

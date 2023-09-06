@@ -2,8 +2,7 @@
     session_start();
 
     if (empty($_SESSION['id_user'])) {
-
-        header('location: ../index.php');
+        header('location: ../login.php');
     } else {
         echo 'hi';
     }
