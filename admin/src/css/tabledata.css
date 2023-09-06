@@ -1,0 +1,74 @@
+.table_data {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+
+.table_data .table_data_main {
+    min-width: 900px;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+
+.table_data .table_data_tittle tr {
+    border-top: none;
+    border-bottom: none !important;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.table_data .table_data_tittle tr th {
+    border-top: none;
+    border-bottom: none !important;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    vertical-align: bottom;
+    padding: 0.75rem;
+    text-align: inherit;
+}
+
+.table_data .table_data_content tr {
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: .3s all ease;
+}
+
+.table_data .table_data_content tr td {
+    color: #777;
+    font-weight: 300;
+    border: none;
+    transition: .3s all ease;
+    padding: 0.75rem;
+    vertical-align: top;
+}
+
+.table_data .table_data_content tr td small {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 300;display: 
+    block !important;
+    font-size: 80%;
+}
+
+.table_data .table_data_main .table_data_content tr:hover td,
+.table_data .table_data_main .table_data_content tr:focus td {
+    color: #fff; 
+}
+
+.table_data .table_data_main .table_data_content tr:hover td a,
+.table_data .table_data_main .table_data_content tr:focus td a {
+    color: #fdd114;
+}
+
+.table_data .table_data_main .table_data_content tr:hover td .more,
+.table_data .table_data_main .table_data_content tr:focus td .more {
+    color: #fdd114; 
+}

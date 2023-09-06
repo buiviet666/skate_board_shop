@@ -31,7 +31,7 @@
 
                 <!-- content -->
                 <div class="main-container">
-                    <div class="main-header anim" style="--delay: 0s">Discover</div>
+                    <div class="main-header anim" style="--delay: 0s">day la trang san pham</div>
                     
                 </div>
             </div>
