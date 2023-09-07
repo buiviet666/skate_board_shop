@@ -3,6 +3,9 @@
     require 'admin/connect.php';
     $sql_product = "select * from product";
     $result_product = mysqli_query($connect, $sql_product);
+
+    $sql_producer = "select * from producer";
+    $result_producer = mysqli_query($connect, $sql_producer);
 ?>
 
 <!DOCTYPE html>
@@ -51,36 +54,28 @@
                                     <ul>
                                         <li>
                                             <i class="fa-solid fa-caret-right"></i>
-                                            <a>Home</a>
+                                            <a href="shop.php">Home</a>
                                         </li>
                                         <li>
                                             <i class="fa-solid fa-caret-right"></i>
-                                            <a>Skateboard</a>
+                                            <a class="down_product_sk8">Skateboard</a>
                                             <i class="shop_down_icon fa-solid fa-chevron-down"></i>
-                                            <ul class="shop_dropdown-menu">
-                                                <li>ván(số lượng)</li>
+                                            <ul class="shop_dropdown-menu list_down_product_sk8">
+                                                <li>ván</li>
                                                 <li>truck</li>
                                                 <li>bánh</li>
-                                                <li>bộ sửa</li>
+                                                <li>dụng cụ</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <i class="fa-solid fa-caret-right"></i>
-                                            <a>Quần áo</a>
-                                                <i class="shop_down_icon fa-solid fa-chevron-down"></i>
-                                                <ul class="shop_dropdown-menu">
-                                                    <li>áo (số lượng)</li>
-                                                    <li>quần (số lượng)</li>
-                                                </ul>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-caret-right"></i>
-                                            <a>Phụ kiện</a>
-                                                <i class="shop_down_icon fa-solid fa-chevron-down"></i>
-                                                <ul class="shop_dropdown-menu">
-                                                    <li>balo (số lượng)</li>
-                                                    <li>giày (số lượng)</li>
-                                                </ul>
+                                            <a class="down_clother_sk8">Phụ kiện</a>
+                                            <i class="shop_down_icon fa-solid fa-chevron-down"></i>
+                                            <ul class="shop_dropdown-menu list_down_clother_sk8">
+                                                <li>áo</li>
+                                                <li>quần</li>
+                                                <li>giày</li>
+                                            </ul>
                                         </li>
                                     </ul>
                                 </div>
@@ -95,54 +90,16 @@
                                 </div>
                                 <div class="shop_category_content">
                                     <ul class="shop_manufac_product">
+                                        <?php foreach ($result_producer as $eacher) { ?>
                                         <li>
                                             <span>
-                                                <label for="txt_manuf">
-                                                    <input type="checkbox" id="txt_manuf">
-                                                    nike
+                                                <label for="<?php echo $eacher['id_producer']; ?>">
+                                                    <input type="checkbox" id="<?php echo $eacher['id_producer']; ?>">
+                                                    <?php echo $eacher['name_producer']; ?>
                                                 </label>
                                             </span>
                                         </li>
-                                        <li>
-                                            <span>
-                                                <label for="txt">
-                                                    <input type="checkbox" id="txt">
-                                                    addidas
-                                                </label>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <label for="txt_manuf">
-                                                    <input type="checkbox" id="txt_manuf">
-                                                    bug
-                                                </label>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <label for="txt_manuf">
-                                                    <input type="checkbox" id="txt_manuf">
-                                                    bug
-                                                </label>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <label for="txt_manuf">
-                                                    <input type="checkbox" id="txt_manuf">
-                                                    bug
-                                                </label>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <label for="txt_manuf">
-                                                    <input type="checkbox" id="txt_manuf">
-                                                    bug
-                                                </label>
-                                            </span>
-                                        </li>
+                                        <?php } ?>
                                     </ul>
                                 </div>
                             </div>

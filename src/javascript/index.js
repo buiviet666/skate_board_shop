@@ -4,6 +4,18 @@ $(document).ready(function () {
         $(".footer_content_main").slideToggle();
         $(".footer_copyrightend").slideToggle();
     });
+
+    $(".down_product_sk8").click(function () {
+        $(".list_down_product_sk8").slideToggle();
+    })
+
+    $(".down_clother_sk8").click(function () {
+        $(".list_down_clother_sk8").slideToggle();
+    })
+
+    $(".shop_size_text").click(function () {
+        $(".shop_sort_down").slideToggle();
+    })
 });
 
 

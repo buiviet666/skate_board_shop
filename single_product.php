@@ -75,7 +75,7 @@
                                 <div>
                                     <div class="single_shop_price">
                                         <span>
-                                            <?php echo $each['price_product']; ?>
+                                            <?php echo $each['price_product']; ?> $
                                         </span>
                                     </div>
                                     <div class="single_shop_situation">
@@ -128,7 +128,7 @@
                     <div class="single_shop_descrip">
                         <h3>Description</h3>
                         <p>
-                            <?php echo $each['desc_product']; ?>
+                            <?php echo $each['number_product']; ?>
                         </p>
                     </div>
                     <div class="single_shop_ship_pos">
