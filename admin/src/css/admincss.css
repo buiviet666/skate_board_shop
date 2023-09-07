@@ -321,7 +321,7 @@ img {
     top: 0;
     left: 0;
     background: linear-gradient(to bottom, #1f1d2b 0%, #1f1d2b 78%, rgba(31, 29, 43, 0) 100%);
-    z-index: 11;
+    /* z-index: 11; */
 }
 
 .container .db_icon {

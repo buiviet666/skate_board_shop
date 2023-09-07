@@ -1,3 +1,13 @@
+<?php
+    $id_product = $_GET['id'];
+
+    require 'admin/connect.php';
+
+    $sql_id_product = "select * from product where id_product = '$id_product'";
+    $result_id_product = mysqli_query($connect, $sql_id_product);
+    $each = mysqli_fetch_array($result_id_product);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +42,7 @@
                     <div class="single_shop_container">
                         <div class="single_shop_half_item">
                             <div class="single_shop_main_img">
-                                <img src="src/img/variant-10_grande.jpg">
+                                <img src="src/save_img_from_db/<?php echo $each['img_product']; ?>">
                             </div>
                             <ul class="single_shop_list_img">
                                 <li>
@@ -59,19 +69,27 @@
                         </div>
                         <div class="single_shop_half_item">
                             <div class="single_shop_content_product">
-                                <h3>ROLLER SKATE</h3>
+                                <h3>
+                                    <?php echo $each['name_product']; ?>
+                                </h3>
                                 <div>
                                     <div class="single_shop_price">
-                                        <span>$700.00</span>
+                                        <span>
+                                            <?php echo $each['price_product']; ?>
+                                        </span>
                                     </div>
                                     <div class="single_shop_situation">
                                         <p>
                                             <label>Availability:</label>
-                                            <span>Many In Stock</span>
+                                            <span>
+                                                <?php echo $each['number_product']; ?>
+                                            </span>
                                         </p>
                                         <p>
                                             <label>Product Vendor:</label>
-                                            <span>Skateboards</span>
+                                            <span>
+                                                <?php echo $each['name_manufacturer']; ?>
+                                            </span>
                                         </p>
                                     </div>
                                     <form class="single_shop_form">
@@ -110,7 +128,7 @@
                     <div class="single_shop_descrip">
                         <h3>Description</h3>
                         <p>
-                            daskdajkwdsadas
+                            <?php echo $each['desc_product']; ?>
                         </p>
                     </div>
                     <div class="single_shop_ship_pos">

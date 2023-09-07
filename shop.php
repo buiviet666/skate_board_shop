@@ -1,3 +1,10 @@
+<?php 
+
+    require 'admin/connect.php';
+    $sql_product = "select * from product";
+    $result_product = mysqli_query($connect, $sql_product);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -205,11 +212,12 @@
                                     <div class="shop_card_container">
                                         <!-- list product -->
                                         <!-- product 1 -->
+                                        <?php foreach ($result_product as $each) { ?>
                                         <div class="shop_all_item">
                                             <div class="shop_item_box">
                                                 <div class="shop_item_thumbnail">
                                                     <a href="" class="shop_item_img">
-                                                        <img src="src/img/noimage.gif">
+                                                        <img src="src/save_img_from_db/<?php echo $each['img_product']; ?>">
                                                     </a>
                                                     <div class="shop_hover_item clear_fix">
                                                         <form class="shop_form_mini_card">
@@ -229,12 +237,14 @@
                                                 </div>
                                                 <div class="shop_item_content">
                                                     <h3>
-                                                        <a href="single_product.php">tên sp</a>
+                                                        <a href="single_product.php?id=<?php echo $each['id_product'] ?>">
+                                                            <?php echo $each['name_product']; ?>
+                                                        </a>
                                                     </h3>
                                                     <div class="shop_item_price">
                                                         <div class="shop_special_price">
                                                             <span>
-                                                                11000 Đ
+                                                                <?php echo $each['price_product']; ?> $
                                                             </span>
                                                         </div>
                                                     </div>
@@ -242,185 +252,8 @@
                                             </div>
                                         </div>
 
-                                        <!-- product 2 -->
-                                        <div class="shop_all_item">
-                                            <div class="shop_item_box">
-                                                <div class="shop_item_thumbnail">
-                                                    <a>
-                                                        <img>
-                                                    </a>
-                                                    <div class="shop_hover_item">
-                                                        <form>
-                                                            <div>
-                                                                <button>
-                                                                    <i>icon giỏ hàng</i>
-                                                                </button>
-                                                                <a>
-                                                                    <i>icon tăng</i>
-                                                                </a>
-                                                                <a>
-                                                                    <i>icon yêu thích</i>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="shop_item_content">
-                                                    <h3>tên sp</h3>
-                                                    <div class="shop_item_price">
-                                                        <div class="shop_special_price">
-                                                            <span>
-                                                                11000 Đ
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <?php } ?>
 
-                                            <!-- product 3 -->
-                                            <div class="shop_all_item">
-                                            <div class="shop_item_box">
-                                                <div class="shop_item_thumbnail">
-                                                    <a>
-                                                        <img>
-                                                    </a>
-                                                    <div class="shop_hover_item">
-                                                        <form>
-                                                            <div>
-                                                                <button>
-                                                                    <i>icon giỏ hàng</i>
-                                                                </button>
-                                                                <a>
-                                                                    <i>icon tăng</i>
-                                                                </a>
-                                                                <a>
-                                                                    <i>icon yêu thích</i>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="shop_item_content">
-                                                    <h3>tên sp</h3>
-                                                    <div class="shop_item_price">
-                                                        <div class="shop_special_price">
-                                                            <span>
-                                                                11000 Đ
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                            <!-- product 4 -->
-                                            <div class="shop_all_item">
-                                            <div class="shop_item_box">
-                                                <div class="shop_item_thumbnail">
-                                                    <a>
-                                                        <img>
-                                                    </a>
-                                                    <div class="shop_hover_item">
-                                                        <form>
-                                                            <div>
-                                                                <button>
-                                                                    <i>icon giỏ hàng</i>
-                                                                </button>
-                                                                <a>
-                                                                    <i>icon tăng</i>
-                                                                </a>
-                                                                <a>
-                                                                    <i>icon yêu thích</i>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="shop_item_content">
-                                                    <h3>tên sp</h3>
-                                                    <div class="shop_item_price">
-                                                        <div class="shop_special_price">
-                                                            <span>
-                                                                11000 Đ
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                            <!-- product 5 -->
-                                            <div class="shop_all_item">
-                                            <div class="shop_item_box">
-                                                <div class="shop_item_thumbnail">
-                                                    <a>
-                                                        <img>
-                                                    </a>
-                                                    <div class="shop_hover_item">
-                                                        <form>
-                                                            <div>
-                                                                <button>
-                                                                    <i>icon giỏ hàng</i>
-                                                                </button>
-                                                                <a>
-                                                                    <i>icon tăng</i>
-                                                                </a>
-                                                                <a>
-                                                                    <i>icon yêu thích</i>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="shop_item_content">
-                                                    <h3>tên sp</h3>
-                                                    <div class="shop_item_price">
-                                                        <div class="shop_special_price">
-                                                            <span>
-                                                                11000 Đ
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                            <!-- product 6 -->
-                                            <div class="shop_all_item">
-                                            <div class="shop_item_box">
-                                                <div class="shop_item_thumbnail">
-                                                    <a>
-                                                        <img>
-                                                    </a>
-                                                    <div class="shop_hover_item">
-                                                        <form>
-                                                            <div>
-                                                                <button>
-                                                                    <i>icon giỏ hàng</i>
-                                                                </button>
-                                                                <a>
-                                                                    <i>icon tăng</i>
-                                                                </a>
-                                                                <a>
-                                                                    <i>icon yêu thích</i>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="shop_item_content">
-                                                    <h3>tên sp</h3>
-                                                    <div class="shop_item_price">
-                                                        <div class="shop_special_price">
-                                                            <span>
-                                                                11000 Đ
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div>
                                         <div>
