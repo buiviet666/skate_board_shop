@@ -18,6 +18,7 @@
                 <input type="text" placeholder="Username" name="username_admin"/>
                 <input type="password" placeholder="password" name="password_admin"/>
                 <input type="submit" value="Login">
+                <a href="../index.php">Trở về cửa hàng</a>
             </form>
         </div>
     </div>
