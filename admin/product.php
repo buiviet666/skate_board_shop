@@ -8,6 +8,10 @@
     require 'connect.php';
     $sql_product = "select * from product";
     $result_product = mysqli_query($connect, $sql_product);
+
+    $sql_producer = "select * from producer";
+    $result_producer = mysqli_query($connect, $sql_producer);
+
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +88,17 @@
                                     </td>
                                     <td>
                                         <a class="more">
-                                            <?php echo $each['name_manufacturer']; ?>
+                                            <?php 
+
+                                                $id_producer = $each['id_producer'];
+                                                $sql_name_producer = "select name_producer from producer where id_producer = $id_producer";
+                                                $result_n_producer = mysqli_query($connect, $sql_name_producer);
+
+                                                $row = mysqli_fetch_assoc($result_n_producer);
+                                                echo $row['name_producer'];
+                                                mysqli_close($connect);
+
+                                            ?>
                                         </a>
                                     </td>
                                     <td>
@@ -215,11 +229,29 @@
                                                 <p>Số lượng sản phẩm</p>
                                                 <span></span>
                                             </div>
+                                            
                                             <div class="input_position">
-                                                <input type="text" name="manuf_product" required />
+                                                <input id="input_value_producer" type="text" name="name_producer" required />
+                                                <input id="id_producer" type="hidden" name="id_producer" />
                                                 <p>Tên nhà sản xuất</p>
                                                 <span></span>
+
+                                                <ul class="dropdown_producer">
+                                                    <li>
+                                                        <?php foreach ($result_producer as $each_producer) { ?>
+                                                        <li>
+                                                            <a data-id="<?php echo $each_producer['id_producer']; ?>" data-name="<?php echo $each_producer['name_producer']; ?>" class="fill-input">
+                                                                <?php echo $each_producer['name_producer']; ?>
+                                                            </a>
+                                                        </li>
+                                                        <?php } ?>
+                                                    </li>
+                                                    
+                                                </ul>
+                                                
                                             </div>
+                                            
+                                            <div class="dropdown_producer_click">Chọn nhà sản xuất</div>
                                             
                                             <!-- ảnh -->
                                             <div class="input_position">

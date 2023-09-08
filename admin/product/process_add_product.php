@@ -5,7 +5,7 @@ $desc_product = addslashes($_POST['desc_product']);
 $price_product = addslashes($_POST['price_product']);
 $type_product = addslashes($_POST['type_product']);
 $number_product = addslashes($_POST['number_product']);
-$manuf_product = addslashes($_POST['manuf_product']);
+$id_producer = addslashes($_POST['id_producer']);
 $img_product = $_FILES['img_product'];
 
 $folder = '../../src/save_img_from_db/';
@@ -21,10 +21,10 @@ if ($img_product['error'] === 0) {
         require '../connect.php';
 
         // Use prepared statements to prevent SQL injection
-        $sql = "INSERT INTO product (name_product, desc_product, price_product, img_product, type_product, number_product, name_manufacturer)
+        $sql = "INSERT INTO product (name_product, desc_product, price_product, img_product, type_product, number_product, id_producer)
                 VALUES (?, ?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_prepare($connect, $sql);
-        mysqli_stmt_bind_param($stmt, "sssssss", $name_product, $desc_product, $price_product, $file_img_name, $type_product, $number_product, $manuf_product);
+        mysqli_stmt_bind_param($stmt, "sssssss", $name_product, $desc_product, $price_product, $file_img_name, $type_product, $number_product, $id_producer);
         
         if (mysqli_stmt_execute($stmt)) {
             // Close the statement and database connection

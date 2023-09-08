@@ -262,3 +262,37 @@ input:not(:focus) ~ p {
 }
 
 /* END CUSTOM INPUT */
+
+.dropdown_producer {
+  position: absolute;
+    width: 170px;
+    left: 30px;
+    top: 74px;
+    z-index: 10000;
+    border-top: none;
+    border: 1px #F0F0F0 solid;
+    border-radius: 2px;
+    overflow: hidden;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+}
+
+.dropdown_producer li {
+  padding: 0 20px;
+  color: #363636;
+  border: 1px solid #ebebeb;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdown_producer li a {
+  text-decoration: none;
+    line-height: 36px;
+}
+
+.dropdown_producer_click {
+  cursor: pointer;
+}

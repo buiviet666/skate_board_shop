@@ -16,6 +16,10 @@ $(document).ready(function () {
     $(".shop_size_text").click(function () {
         $(".shop_sort_down").slideToggle();
     })
+
+    $(".dropdown_producer_click").click(function () {
+        $(".dropdown_producer").slideToggle();
+    })
 });
 
 // slide fullpage library

@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $price_product = $_POST['price_product'];
     $type_product = $_POST['type_product'];
     $number_product = $_POST['number_product'];
-    $manuf_product = $_POST['manuf_product'];
+    $id_producer = $_POST['id_producer'];
 
     // Xử lý ảnh nếu được tải lên
     if ($_FILES['img_product']['error'] === 0) {
@@ -22,9 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             require '../connect.php'; // Kết nối đến cơ sở dữ liệu, thay thế bằng thông tin đăng nhập của bạn
 
             // Sử dụng prepared statements để tránh SQL injection
-            $sql = "UPDATE product SET name_product = ?, desc_product = ?, price_product = ?, img_product = ?, type_product = ?, number_product = ?, name_manufacturer = ? WHERE id_product = ?";
+            $sql = "UPDATE product SET name_product = ?, desc_product = ?, price_product = ?, img_product = ?, type_product = ?, number_product = ?, id_producer = ? WHERE id_product = ?";
             $stmt = mysqli_prepare($connect, $sql);
-            mysqli_stmt_bind_param($stmt, "sssssssi", $name_product, $desc_product, $price_product, $file_img_name, $type_product, $number_product, $manuf_product, $id_product);
+            mysqli_stmt_bind_param($stmt, "sssssssi", $name_product, $desc_product, $price_product, $file_img_name, $type_product, $number_product, $id_producer, $id_product);
 
             if (mysqli_stmt_execute($stmt)) {
                 // Đóng statement và kết nối cơ sở dữ liệu
