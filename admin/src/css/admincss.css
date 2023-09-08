@@ -325,12 +325,12 @@ img {
 }
 
 .container .db_icon {
-    padding: 8px;
-    border-radius: 10px;
-    background-color: var(--button-bg);
-    flex-shrink: 0;
-    margin-right: 16px;
-    font-size: 12px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: var(--button-bg);
+  flex-shrink: 0;
+  margin-right: 16px;
+  font-size: 12px;
 }
 /* END DASHBOARD */
 

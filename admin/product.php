@@ -3,8 +3,6 @@
 
     if (empty($_SESSION['id_user'])) {
         header('location:login.php');
-    } else {
-        echo 'hi';
     }
 
     require 'connect.php';
@@ -20,6 +18,7 @@
     <link rel="stylesheet" href="../src/css/nomalize.css">
     <link rel="stylesheet" href="src/css/tabledata.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     
     <title>Document</title>
     <link rel="stylesheet" href="src/css/admincss.css">
@@ -89,7 +88,82 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <i class="fa-solid fa-info"></i>
+                                        <a onclick="getId(event, <?php echo $each['id_product']; ?>)" id="btn_fix-<?php echo $each['id_product']; ?>" style="cursor: pointer" >
+                                            <i class="fa-solid fa-wrench"></i>
+                                        </a>
+
+                                        <div class="modal-container" id="modal_fix-<?php echo $each['id_product']; ?>">
+                                            <div class="modal-wrapper">
+                                                <div class="modal">
+
+                                                    <form action="product/process_fix_product.php" method="post" enctype="multipart/form-data">
+                                                        <header>
+                                                            <h2>Sửa sản phẩm</h2>
+                                                        </header>
+
+                                                        <main>
+                                                                <input style="display: none;" type="number" name="id_product" value="<?php echo $each['id_product']; ?>" />
+                                                            <div class="input_position">
+                                                                <input type="text" name="name_product" value="<?php echo $each['name_product']; ?>" required />
+                                                                <p>Tên sản phẩm</p>
+                                                                <span></span>
+                                                            </div>
+                                                            <div class="input_position">
+                                                                <input type="text" name="desc_product" value="<?php echo $each['desc_product']; ?>" required />
+                                                                <p>Mô tả</p>
+                                                                <span></span>
+                                                            </div>
+                                                            <div class="input_position">
+                                                                <input type="number" name="price_product" value="<?php echo $each['price_product']; ?>" required />
+                                                                <p>Giá</p>
+                                                                <span></span>
+                                                            </div>
+                                                            <div class="input_position">
+                                                                <input type="text" name="type_product" value="<?php echo $each['type_product']; ?>" required />
+                                                                <p>Loại sản phẩm</p>
+                                                                <span></span>
+                                                            </div>
+                                                            <div class="input_position">
+                                                                <input type="number" name="number_product" value="<?php echo $each['number_product']; ?>" required />
+                                                                <p>Số lượng sản phẩm</p>
+                                                                <span></span>
+                                                            </div>
+                                                            <div class="input_position">
+                                                                <input type="text" name="manuf_product" value="<?php echo $each['name_manufacturer']; ?>" required />
+                                                                <p>Tên nhà sản xuất</p>
+                                                                <span></span>
+                                                            </div>
+                                                            
+                                                            <!-- ảnh -->
+                                                            <div class="input_position">
+                                                                <input type="file" name="img_product" required />
+                                                                <span></span>
+                                                            </div>
+                                                            <!-- hết ảnh -->
+
+                                                        </main>
+
+                                                        <footer>
+                                                            <div class="btn-container">
+                                                                <div class="cancel-wrapper">
+                                                                    <input type="submit" class="btn btn-cancel" value="sửa">
+                                                                </div>
+                                                                <div class="delet-confirm-wrapper">
+                                                                    <a class="btn btn-confirm" onclick="hideModal(event, <?php echo $each['id_product']; ?>)" style="color: color: #d02b20 !important;">
+                                                                        <i class="fa-solid fa-trash"></i>
+                                                                        Hủy
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </footer>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a href="product/process_del_product.php?id=<?php echo $each['id_product'] ?>">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </a>
                                     </td>
                                 </tr>
 
@@ -183,5 +257,6 @@
     </div>
 
     <script src="src/javascript/adminjs.js"></script>
+    <script src="../src/javascript/index.js"></script>
 </body>
 </html>

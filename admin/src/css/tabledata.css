@@ -179,7 +179,7 @@
     box-shadow: rgba(50, 50, 77, 0.1) 0px 2px 8px 0px;
   }
   .btn-confirm {
-    color: #d02b20;
+    color: #d02b20 !important;
     font-weight: 700;
     border: 1px solid #f5c0b8;
     background-color: #fcecea;
