@@ -20,6 +20,10 @@ $(document).ready(function () {
     $(".dropdown_producer_click").click(function () {
         $(".dropdown_producer").slideToggle();
     })
+
+    $(".dropdown_fix_producer_click").click(function () {
+        $(".dropdown_fix_producer").slideToggle();
+    })
 });
 
 // slide fullpage library

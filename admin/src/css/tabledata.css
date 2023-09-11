@@ -263,7 +263,8 @@ input:not(:focus) ~ p {
 
 /* END CUSTOM INPUT */
 
-.dropdown_producer {
+.dropdown_producer,
+.dropdown_fix_producer {
   position: absolute;
     width: 170px;
     left: 30px;
@@ -280,7 +281,8 @@ input:not(:focus) ~ p {
     display: none;
 }
 
-.dropdown_producer li {
+.dropdown_producer li,
+.dropdown_fix_producer li {
   padding: 0 20px;
   color: #363636;
   border: 1px solid #ebebeb;
@@ -288,11 +290,19 @@ input:not(:focus) ~ p {
   cursor: pointer;
 }
 
-.dropdown_producer li a {
+.dropdown_producer li a,
+.dropdown_fix_producer li a {
   text-decoration: none;
-    line-height: 36px;
+  line-height: 36px;
 }
 
-.dropdown_producer_click {
+.dropdown_producer_click,
+.dropdown_fix_producer_click {
   cursor: pointer;
+  font-family: var(--body-font);
+  color: var(--body-color);
+}
+
+.fill-fix_input:hover {
+  color: #363636;
 }

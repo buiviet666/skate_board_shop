@@ -40,7 +40,7 @@
 
                 <!-- content -->
                 <div class="main-container">
-                    <div class="main-header anim" style="--delay: 0s">day la trang san pham</div>
+                    <div class="main-header anim" style="--delay: 0s">CRUD Product</div>
                     
                     <div class="table_data">
                         <table class="table_data_main">
@@ -78,7 +78,7 @@
                                     </td>
                                     <td style ="width: 10%;">
                                         <img src="../src/save_img_from_db/<?php echo $each['img_product']; ?>">
-                                        <small>vcl</small>
+                                        <small>ảnh sản phẩm</small>
                                     </td>
                                     <td>
                                         <?php echo $each['number_product']; ?>
@@ -143,14 +143,30 @@
                                                                 <span></span>
                                                             </div>
                                                             <div class="input_position">
-                                                                <input type="text" name="manuf_product" value="<?php echo $each['name_manufacturer']; ?>" required />
+                                                                <input id="input_value_fix_producer" type="text" name="name_fix_producer" required />
+                                                                <input id="id_fix_producer" type="hidden" name="id_fix_producer" />
                                                                 <p>Tên nhà sản xuất</p>
                                                                 <span></span>
+
+                                                                <ul class="dropdown_fix_producer">
+                                                                    <li>
+                                                                        <?php foreach ($result_producer as $each_producer) { ?>
+                                                                        <li>
+                                                                            <a data-id_fix="<?php echo $each_producer['id_producer']; ?>" data-name_fix="<?php echo $each_producer['name_producer']; ?>" class="fill-fix_input" style="color: #363636 !important;">
+                                                                                <?php echo $each_producer['name_producer']; ?>
+                                                                            </a>
+                                                                        </li>
+                                                                        <?php } ?>
+                                                                    </li>
+                                                                    
+                                                                </ul>
                                                             </div>
+
+                                                            <div class="dropdown_fix_producer_click">Chọn nhà sản xuất</div>
                                                             
                                                             <!-- ảnh -->
                                                             <div class="input_position">
-                                                                <input type="file" name="img_product" required />
+                                                                <input type="file" name="img_product" accept="image/*"/>
                                                                 <span></span>
                                                             </div>
                                                             <!-- hết ảnh -->
@@ -186,7 +202,6 @@
                             </tbody>
                         </table>
                     </div>
-                    <p>chuyeern trang</p>
 
                     <div class="form_popup">
                         <!-- Button -->
