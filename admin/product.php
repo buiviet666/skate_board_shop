@@ -116,7 +116,7 @@
                                                         </header>
 
                                                         <main>
-                                                                <input style="display: none;" type="number" name="id_product" value="<?php echo $each['id_product']; ?>" />
+                                                            <input style="display: none;" type="number" name="id_product" value="<?php echo $each['id_product']; ?>" />
                                                             <div class="input_position">
                                                                 <input type="text" name="name_product" value="<?php echo $each['name_product']; ?>" required />
                                                                 <p>Tên sản phẩm</p>
@@ -203,7 +203,7 @@
                         </table>
                     </div>
 
-                    <div class="form_popup">
+                    <div class="form_popup" style="padding-top: 10px;">
                         <!-- Button -->
                         <div class="btn-wrapper">
                             <button class="myBtn" id="myBtn">add</button>
@@ -254,11 +254,11 @@
                                                 <ul class="dropdown_producer">
                                                     <li>
                                                         <?php foreach ($result_producer as $each_producer) { ?>
-                                                        <li>
-                                                            <a data-id="<?php echo $each_producer['id_producer']; ?>" data-name="<?php echo $each_producer['name_producer']; ?>" class="fill-input">
-                                                                <?php echo $each_producer['name_producer']; ?>
-                                                            </a>
-                                                        </li>
+                                                            <li>
+                                                                <a data-id="<?php echo $each_producer['id_producer']; ?>" data-name="<?php echo $each_producer['name_producer']; ?>" class="fill-input">
+                                                                    <?php echo $each_producer['name_producer']; ?>
+                                                                </a>
+                                                            </li>
                                                         <?php } ?>
                                                     </li>
                                                     

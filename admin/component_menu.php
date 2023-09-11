@@ -13,12 +13,12 @@
 
             <a class="sidebar-link trending" href="employee.php">
                 <i class="db_icon fa-solid fa-user"></i>
-                Employee manager
+                Employee management
             </a>
 
             <a class="sidebar-link trending" href="customer.php">
                 <i class="db_icon fa-solid fa-users"></i>
-                Customer manager
+                Customer management
             </a>
 
             <a class="sidebar-link" href="product.php">
@@ -33,7 +33,7 @@
 
             <a class="sidebar-link" href="blog.php">
                 <i class="db_icon fa-solid fa-newspaper"></i>
-                Blog manager
+                Blog management
             </a>
         </div>
     </div>

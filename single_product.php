@@ -88,12 +88,21 @@
                                         <p>
                                             <label>Product Vendor:</label>
                                             <span>
-                                                <?php echo $each['name_manufacturer']; ?>
+                                                <?php
+                                                    $id_producer = $each['id_producer'];
+                                                    $sql_n_producer = "SELECT name_producer FROM producer WHERE id_producer = $id_producer";
+                                                    $result_n_producer = mysqli_query($connect, $sql_n_producer);
+
+                                                    $rows = mysqli_fetch_array($result_n_producer);
+                                                    $name_producer = $rows['name_producer'];
+
+                                                    echo $name_producer;
+                                                ?>
                                             </span>
                                         </p>
                                     </div>
                                     <form class="single_shop_form">
-                                        <div class="single_shop_form_container">
+                                        <!-- <div class="single_shop_form_container">
                                             <label class="single_shop_size_title">
                                                 Size:
                                             </label>
@@ -105,7 +114,7 @@
                                                 <label for="size_two">8.6</label>
                                                 <input type="radio" id="size_two" value="2">
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div>
                                             <label class="single_shop_size_title">
                                                 Quantity:

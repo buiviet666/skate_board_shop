@@ -1,28 +1,3 @@
-function getId(event, id_product) {
-    // Lấy thẻ <a> bằng cách sử dụng event.target
-    var link = event.target;
-
-    // In ra giá trị id
-    console.log("ID của liên kết là: " + id_product);
-
-    let modalId = "modal_fix-" + id_product;
-    let modal = document.getElementById(modalId);
-    modal.classList.add("show");
-}
-
-function hideModal(event, id_product) {
-    event.preventDefault();
-
-    // Tạo id của phần tử modal tương ứng
-    var modalId = "modal_fix-" + id_product;
-
-    // Lấy phần tử modal dựa trên id
-    var modal = document.getElementById(modalId);
-
-    modal.classList.remove("show");
-}
-
-
 // variable
 let modal = document.getElementById("myModal");
 let btn = document.getElementById("myBtn");
@@ -45,6 +20,32 @@ window.onclick = function (event) {
     }
 };
 
+
+
+// ---------------------------SẢN PHẨM---
+// click icon => form sửa sản phẩm 
+function getId(event, id_product) {
+    // In ra giá trị id
+    // console.log("ID của liên kết là: " + id_product);
+
+    let modalId = "modal_fix-" + id_product;
+    let modal = document.getElementById(modalId);
+    modal.classList.add("show");
+}
+
+// click => ẩn form sửa sản phẩm
+function hideModal(event, id_product) {
+    event.preventDefault();
+
+    // Tạo id của phần tử modal tương ứng
+    var modalId = "modal_fix-" + id_product;
+
+    // Lấy phần tử modal dựa trên id
+    var modal = document.getElementById(modalId);
+
+    modal.classList.remove("show");
+}
+
 // Get all the anchor elements with the class "fill-input"
 const fillInputLinks = document.querySelectorAll(".fill-input");
 const inputProducer = document.getElementById("input_value_producer");
@@ -66,7 +67,6 @@ fillInputLinks.forEach(function (link) {
     });
 });
 
-
 // Get all the anchor elements with the class "fill-input"
 const fillfixInputLinks = document.querySelectorAll(".fill-fix_input");
 const inputfixProducer = document.getElementById("input_value_fix_producer");
@@ -87,4 +87,58 @@ fillfixInputLinks.forEach(function (link) {
         inputfixIdProducer.value = dataIdfix;
     });
 });
+// ------------------------HẾT SẢN PHẨM---
 
+
+
+// ---------------------------NHÂN VIÊN---
+// click icon => form sửa nhân viên
+function getId_employee(event, id_employee) {
+    // In ra giá trị id
+    // console.log("ID của liên kết là: " + id_employee);
+
+    let modalId = "modal_employee-" + id_employee;
+    let modal = document.getElementById(modalId);
+    modal.classList.add("show");
+}
+
+// click => ẩn form sửa nhân viên
+function hideModal(event, id_employee) {
+    event.preventDefault();
+
+    // Tạo id của phần tử modal tương ứng
+    var modalId = "modal_employee-" + id_employee;
+
+    // Lấy phần tử modal dựa trên id
+    var modal = document.getElementById(modalId);
+
+    modal.classList.remove("show");
+}
+// -----------------------HẾT NHÂN VIÊN---
+
+
+
+// ---------------------------KHÁCH HÀNG---
+// click icon => form sửa nhân viên
+function getId_customer(event, id_customer) {
+    // In ra giá trị id
+    // console.log("ID của liên kết là: " + id_customer);
+
+    let modalId = "modal_customer-" + id_customer;
+    let modal = document.getElementById(modalId);
+    modal.classList.add("show");
+}
+
+// click => ẩn form sửa nhân viên
+function hideModal(event, id_customer) {
+    event.preventDefault();
+
+    // Tạo id của phần tử modal tương ứng
+    var modalId = "modal_customer-" + id_customer;
+
+    // Lấy phần tử modal dựa trên id
+    var modal = document.getElementById(modalId);
+
+    modal.classList.remove("show");
+}
+// -----------------------HẾT KHÁCH HÀNG---

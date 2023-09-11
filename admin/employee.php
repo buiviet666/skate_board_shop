@@ -3,9 +3,12 @@
 
     if (empty($_SESSION['id_user'])) {
         header('location:login.php');
-    } else {
-        echo 'hi';
     }
+
+    require "connect.php";
+
+    $sql_employee = "select * from users where id_roles = 2";
+    $result_sql_employee = mysqli_query($connect, $sql_employee);
 ?>
 
 <!DOCTYPE html>
@@ -30,11 +33,9 @@
                 <!-- header -->
                 <?php include "component_header.php" ?>
 
-                <h1>bread-crumb</h1>
-
                 <!-- content -->
                 <div class="main-container">
-                    <div class="main-header anim" style="--delay: 0s">day la trang nhan vien</div>
+                    <div class="main-header anim" style="--delay: 0s">CRUD employee</div>
                     
                     <div class="table_data">
                         <table class="table_data_main">
@@ -52,139 +53,211 @@
                                 </tr>
                             </thead>
                             <tbody class="table_data_content">
+                                
+                                <?php foreach ($result_sql_employee as $each_employee) { ?>
+                                
                                 <tr>
-                                    <td>1</td>
-                                    <td>việt</td>
-                                    <td>nam</td>
+                                    <td>
+                                        <?php echo $each_employee['id_user']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $each_employee['ten_user']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $each_employee['gioitinh_user']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $each_employee['username_user']; ?>
+                                    </td>
                                     <td>
                                         <a>
-                                            vietbui
+                                            <?php echo $each_employee['password_user']; ?>
                                         </a>
                                     </td>
                                     <td>
-                                        hề
-                                        <small>vcl</small>
+                                        <?php echo $each_employee['phone_user']; ?>
                                     </td>
                                     <td>
-                                        09432-4
+                                        <?php echo $each_employee['email_user']; ?>
                                     </td>
                                     <td>
-                                        viet@gmail.com
+                                        <?php echo $each_employee['address_user']; ?>
                                     </td>
                                     <td>
-                                        <a class="more" href="">
-                                            Ha Noi
+                                        <a onclick="getId_employee(event, <?php echo $each_employee['id_user']; ?>)" id="btn_employee-<?php echo $each_employee['id_user']; ?>" style="cursor: pointer" >
+                                            <i class="fa-solid fa-wrench"></i>
                                         </a>
-                                    </td>
-                                    <td>
-                                        <i class="fa-solid fa-info"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>việt</td>
-                                    <td>nam</td>
-                                    <td>
-                                        <a>
-                                            vietbui
-                                        </a>
-                                    </td>
-                                    <td>
-                                        hề
-                                        <small>vcl</small>
-                                    </td>
-                                    <td>
-                                        09432-4
-                                    </td>
-                                    <td>
-                                        viet@gmail.com
-                                    </td>
-                                    <td>
-                                        <a href="">
-                                            Ha Noi
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>việt</td>
-                                    <td>nam</td>
-                                    <td>
-                                        <a>
-                                            vietbui
-                                        </a>
-                                    </td>
-                                    <td>
-                                        hề
-                                        <small>vcl</small>
-                                    </td>
-                                    <td>
-                                        09432-4
-                                    </td>
-                                    <td>
-                                        viet@gmail.com
-                                    </td>
-                                    <td>
-                                        <a href="">
-                                            Ha Noi
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>việt</td>
-                                    <td>nam</td>
-                                    <td>
-                                        <a>
-                                            vietbui
-                                        </a>
-                                    </td>
-                                    <td>
-                                        hề
-                                        <small>vcl</small>
-                                    </td>
-                                    <td>
-                                        09432-4
-                                    </td>
-                                    <td>
-                                        viet@gmail.com
-                                    </td>
-                                    <td>
-                                        <a href="">
-                                            Ha Noi
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>việt</td>
-                                    <td>nam</td>
-                                    <td>
-                                        <a>
-                                            vietbui
-                                        </a>
-                                    </td>
-                                    <td>
-                                        hề
-                                        <small>vcl</small>
-                                    </td>
-                                    <td>
-                                        09432-4
-                                    </td>
-                                    <td>
-                                        viet@gmail.com
-                                    </td>
-                                    <td>
-                                        <a href="">
-                                            Ha Noi
+
+                                        <div class="modal-container" id="modal_employee-<?php echo $each_employee['id_user']; ?>">
+                                            <div class="modal-wrapper">
+                                                <div class="modal">
+
+                                                    <form action="employee/process_fix_employee.php" method="post" enctype="multipart/form-data">
+                                                        <header>
+                                                            <h2>Sửa nhân viên</h2>
+                                                        </header>
+
+                                                        <main>
+                                                            <input type="hidden" name="id_employee" value="<?php echo $each_employee['id_user']; ?>" />
+                                                            <div class="input_position">
+                                                                <input type="text" name="name_employee" value="<?php echo $each_employee['ten_user'];?>" required />
+                                                                <p>Tên nhân viên</p>
+                                                                <span></span>
+                                                            </div>
+                                                            <div class="input_position">
+                                                                <input type="text" name="username_employee" value="<?php echo $each_employee['username_user'];?>" required />
+                                                                <p>Tên đăng nhập</p>
+                                                                <span></span>
+                                                            </div>
+                                                            <div class="input_position">
+                                                                <input type="password" name="password_employee" value="<?php echo $each_employee['password_user'];?>" required />
+                                                                <p>Mật khẩu</p>
+                                                                <span></span>
+                                                            </div>
+                                                            <div class="input_position">
+                                                                <input type="number" name="numberphone_employee" value="<?php echo $each_employee['phone_user'];?>" required />
+                                                                <p>Số điện thoại</p>
+                                                                <span></span>
+                                                            </div>
+                                                            <div class="input_position">
+                                                                <input type="email" name="email_employee" value="<?php echo $each_employee['email_user'];?>" required />
+                                                                <p>Email</p>
+                                                                <span></span>
+                                                            </div>
+
+                                                            <div class="input_position">
+                                                                <input type="text" name="address_employee" value="<?php echo $each_employee['address_user'];?>" required />
+                                                                <p>Địa chỉ</p>
+                                                                <span></span>
+                                                            </div>
+                                                            
+                                                            <div class="input_position">
+                                                                <p style="font-family: var(--body-font); color: var(--body-color);">Giới tính</p>
+                                                                <div style="font-family: var(--body-font); color: var(--body-color);">
+                                                                    <label for="gender_khac">Khác</label>
+                                                                    <input id="gender_khac" type="radio" name="gender_employee" value="Khác"/>
+                                                                    
+                                                                    <label for="gender_nam" style="padding-left: 15px;">Nam</label>
+                                                                    <input id="gender_nam" type="radio" name="gender_employee" value="Nam"/>
+                                                                    
+                                                                    <label for="gender_nu" style="padding-left: 15px;">Nữ</label>
+                                                                    <input id="gender_nu" type="radio" name="gender_employee" value="Nữ"/>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </main>
+
+                                                        <footer>
+                                                            <div class="btn-container">
+                                                                <div class="cancel-wrapper">
+                                                                    <input type="submit" class="btn btn-cancel" value="tạo">
+                                                                </div>
+                                                                <div class="delet-confirm-wrapper">
+                                                                    <a class="btn btn-confirm" onclick="hideModal(event, <?php echo $each_employee['id_user']; ?>)" style="color: color: #d02b20 !important;">
+                                                                        <i class="fa-solid fa-trash"></i>
+                                                                        Hủy
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </footer>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a href="employee/process_del_employee.php?id=<?php echo $each_employee['id_user'] ?>">
+                                            <i class="fa-solid fa-trash"></i>
                                         </a>
                                     </td>
                                 </tr>
+
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>
-                    <p>chuyeern trang</p>
 
-                    <div>
-                        <button>
-                            theem nhan vien
-                        </button>
+                    <div style="padding-top: 10px">
+                        <div class="btn-wrapper">
+                            <button class="myBtn" id="myBtn">add</button>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal-container" id="myModal">
+                            <div class="modal-wrapper">
+                                <div class="modal">
+
+                                    <form action="employee/process_add_employee.php" method="post" enctype="multipart/form-data">
+                                        <header>
+                                            <h2>Thêm nhân viên</h2>
+                                        </header>
+
+                                        <main>
+                                            <div class="input_position">
+                                                <input type="text" name="name_employee" required />
+                                                <p>Tên nhân viên</p>
+                                                <span></span>
+                                            </div>
+                                            <div class="input_position">
+                                                <input type="text" name="username_employee" required />
+                                                <p>Tên đăng nhập</p>
+                                                <span></span>
+                                            </div>
+                                            <div class="input_position">
+                                                <input type="password" name="password_employee" required />
+                                                <p>Mật khẩu</p>
+                                                <span></span>
+                                            </div>
+                                            <div class="input_position">
+                                                <input type="number" name="numberphone_employee" required />
+                                                <p>Số điện thoại</p>
+                                                <span></span>
+                                            </div>
+                                            <div class="input_position">
+                                                <input type="email" name="email_employee" required />
+                                                <p>Email</p>
+                                                <span></span>
+                                            </div>
+
+                                            <div class="input_position">
+                                                <input type="text" name="address_employee" required />
+                                                <p>Địa chỉ</p>
+                                                <span></span>
+                                            </div>
+                                            
+                                            <div class="input_position">
+                                                <p>Giới tính</p>
+                                                <div>
+                                                    <label for="input_value_gender_gender">Khác</label>
+                                                    <input id="input_value_gender_gender" type="radio" name="gender_employee" value="Khác"/>
+                                                    
+                                                    <label for="input_value_gender_male" style="padding-left: 15px;">Nam</label>
+                                                    <input id="input_value_gender_male" type="radio" name="gender_employee" value="Nam"/>
+                                                    
+                                                    <label for="input_value_gender_female" style="padding-left: 15px;">Nữ</label>
+                                                    <input id="input_value_gender_female" type="radio" name="gender_employee" value="Nữ"/>
+                                                </div>
+                                            </div>
+                                            
+                                        </main>
+
+                                        <footer>
+                                            <div class="btn-container">
+                                                <div class="cancel-wrapper">
+                                                    <input type="submit" class="btn btn-cancel" value="tạo">
+                                                </div>
+                                                <div class="delet-confirm-wrapper">
+                                                    <a class="btn btn-confirm">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                        Hủy
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </footer>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
