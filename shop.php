@@ -37,7 +37,7 @@
         <div class = "main_right_content">
             <div class = "right_content_position">
                 <!-- main content -->
-                <div>bread-crumb</div>
+                <!-- <div>bread-crumb</div> -->
                 <div class="shop">
                     <div style="display: flex">
                         <div class="shop_main_left shop_container">
@@ -115,7 +115,17 @@
                                                     kết quả lọc
                                                 </h1>
                                                 <span>
-                                                    (372 sản phẩm)
+                                                    (
+                                                    <?php 
+                                                        $sql = "SELECT COUNT(*) AS total_rows FROM product";
+                                                        $result_count_product = mysqli_query($connect, $sql);
+
+                                                        $rows = mysqli_fetch_array($result_count_product);
+                                                        $total_rows = $rows['total_rows'];
+
+                                                        echo $total_rows;
+                                                    ?>
+                                                        sản phẩm)
                                                 </span>
                                             </div>
                                         </div>

@@ -134,7 +134,7 @@ function hideModal(event, id_customer) {
     event.preventDefault();
 
     // Tạo id của phần tử modal tương ứng
-    var modalId = "modal_customer-" + id_customer;
+    var modalId = "modal_employee-" + id_customer;
 
     // Lấy phần tử modal dựa trên id
     var modal = document.getElementById(modalId);

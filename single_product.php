@@ -44,7 +44,7 @@
                             <div class="single_shop_main_img">
                                 <img src="src/save_img_from_db/<?php echo $each['img_product']; ?>">
                             </div>
-                            <ul class="single_shop_list_img">
+                            <!-- <ul class="single_shop_list_img">
                                 <li>
                                     <a>
                                         <img src="src/img/variant-10_grande.jpg">
@@ -65,7 +65,7 @@
                                         <img src="src/img/variant-10_grande.jpg">
                                     </a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="single_shop_half_item">
                             <div class="single_shop_content_product">

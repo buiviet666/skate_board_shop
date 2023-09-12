@@ -1,5 +1,12 @@
 <?php 
     session_start();
+    
+    require 'connect.php';
+    $sql_product = "select * from product";
+    $result_product = mysqli_query($connect, $sql_product);
+
+    $sql_producer = "select * from producer";
+    $result_producer = mysqli_query($connect, $sql_producer);
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +38,7 @@
         <div class = "main_right_content">
             <div class = "right_content_position">
                 <!-- main content -->
-                <div>bread-crumb</div>
+                <!-- <div>bread-crumb</div> -->
                 <div class="shop">
                     <div style="display: flex">
                         <div class="shop_main_left shop_container">
@@ -48,36 +55,28 @@
                                     <ul>
                                         <li>
                                             <i class="fa-solid fa-caret-right"></i>
-                                            <a>Home</a>
+                                            <a href="shop.php">Home</a>
                                         </li>
                                         <li>
                                             <i class="fa-solid fa-caret-right"></i>
-                                            <a>Skateboard</a>
+                                            <a class="down_product_sk8">Skateboard</a>
                                             <i class="shop_down_icon fa-solid fa-chevron-down"></i>
-                                            <ul class="shop_dropdown-menu">
-                                                <li>ván(số lượng)</li>
+                                            <ul class="shop_dropdown-menu list_down_product_sk8">
+                                                <li>ván</li>
                                                 <li>truck</li>
                                                 <li>bánh</li>
-                                                <li>bộ sửa</li>
+                                                <li>dụng cụ</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <i class="fa-solid fa-caret-right"></i>
-                                            <a>Quần áo</a>
-                                                <i class="shop_down_icon fa-solid fa-chevron-down"></i>
-                                                <ul class="shop_dropdown-menu">
-                                                    <li>áo (số lượng)</li>
-                                                    <li>quần (số lượng)</li>
-                                                </ul>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-caret-right"></i>
-                                            <a>Phụ kiện</a>
-                                                <i class="shop_down_icon fa-solid fa-chevron-down"></i>
-                                                <ul class="shop_dropdown-menu">
-                                                    <li>balo (số lượng)</li>
-                                                    <li>giày (số lượng)</li>
-                                                </ul>
+                                            <a class="down_clother_sk8">Phụ kiện</a>
+                                            <i class="shop_down_icon fa-solid fa-chevron-down"></i>
+                                            <ul class="shop_dropdown-menu list_down_clother_sk8">
+                                                <li>áo</li>
+                                                <li>quần</li>
+                                                <li>giày</li>
+                                            </ul>
                                         </li>
                                     </ul>
                                 </div>
@@ -92,54 +91,16 @@
                                 </div>
                                 <div class="shop_category_content">
                                     <ul class="shop_manufac_product">
+                                        <?php foreach ($result_producer as $eacher) { ?>
                                         <li>
                                             <span>
-                                                <label for="txt_manuf">
-                                                    <input type="checkbox" id="txt_manuf">
-                                                    nike
+                                                <label for="<?php echo $eacher['id_producer']; ?>">
+                                                    <input type="checkbox" id="<?php echo $eacher['id_producer']; ?>">
+                                                    <?php echo $eacher['name_producer']; ?>
                                                 </label>
                                             </span>
                                         </li>
-                                        <li>
-                                            <span>
-                                                <label for="txt">
-                                                    <input type="checkbox" id="txt">
-                                                    addidas
-                                                </label>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <label for="txt_manuf">
-                                                    <input type="checkbox" id="txt_manuf">
-                                                    bug
-                                                </label>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <label for="txt_manuf">
-                                                    <input type="checkbox" id="txt_manuf">
-                                                    bug
-                                                </label>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <label for="txt_manuf">
-                                                    <input type="checkbox" id="txt_manuf">
-                                                    bug
-                                                </label>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <label for="txt_manuf">
-                                                    <input type="checkbox" id="txt_manuf">
-                                                    bug
-                                                </label>
-                                            </span>
-                                        </li>
+                                        <?php } ?>
                                     </ul>
                                 </div>
                             </div>
@@ -155,7 +116,17 @@
                                                     kết quả lọc
                                                 </h1>
                                                 <span>
-                                                    (372 sản phẩm)
+                                                    (
+                                                    <?php 
+                                                        $sql = "SELECT COUNT(*) AS total_rows FROM product";
+                                                        $result_count_product = mysqli_query($connect, $sql);
+
+                                                        $rows = mysqli_fetch_array($result_count_product);
+                                                        $total_rows = $rows['total_rows'];
+
+                                                        echo $total_rows;
+                                                    ?>
+                                                    sản phẩm)
                                                 </span>
                                             </div>
                                         </div>
@@ -209,11 +180,12 @@
                                     <div class="shop_card_container">
                                         <!-- list product -->
                                         <!-- product 1 -->
+                                        <?php foreach ($result_product as $each) { ?>
                                         <div class="shop_all_item">
                                             <div class="shop_item_box">
                                                 <div class="shop_item_thumbnail">
                                                     <a href="" class="shop_item_img">
-                                                        <img src="../src/img/noimage.gif">
+                                                        <img src="../src/save_img_from_db/<?php echo $each['img_product']; ?>">
                                                     </a>
                                                     <div class="shop_hover_item clear_fix">
                                                         <form class="shop_form_mini_card">
@@ -221,7 +193,7 @@
                                                                 <button class="shop_icon_minicss hover_green_icon">
                                                                     <i class="fa-solid fa-cart-shopping"></i>
                                                                 </button>
-                                                                <a href="" style="display: inline-block;" class="shop_icon_minicss hover_green_icon">
+                                                                <a style="display: inline-block;" class="shop_icon_minicss hover_green_icon">
                                                                     <i class="fa-solid fa-magnifying-glass"></i>
                                                                 </a>
                                                                 <a style="display: inline-block;" class="shop_icon_minicss hover_pink_icon">
@@ -233,12 +205,14 @@
                                                 </div>
                                                 <div class="shop_item_content">
                                                     <h3>
-                                                        <a href="single_product.php">tên sp</a>
+                                                        <a href="single_product.php?id=<?php echo $each['id_product'] ?>">
+                                                            <?php echo $each['name_product']; ?>
+                                                        </a>
                                                     </h3>
                                                     <div class="shop_item_price">
                                                         <div class="shop_special_price">
                                                             <span>
-                                                                11000 Đ
+                                                                <?php echo $each['price_product']; ?> $
                                                             </span>
                                                         </div>
                                                     </div>
@@ -246,185 +220,8 @@
                                             </div>
                                         </div>
 
-                                        <!-- product 2 -->
-                                        <div class="shop_all_item">
-                                            <div class="shop_item_box">
-                                                <div class="shop_item_thumbnail">
-                                                    <a>
-                                                        <img>
-                                                    </a>
-                                                    <div class="shop_hover_item">
-                                                        <form>
-                                                            <div>
-                                                                <button>
-                                                                    <i>icon giỏ hàng</i>
-                                                                </button>
-                                                                <a>
-                                                                    <i>icon tăng</i>
-                                                                </a>
-                                                                <a>
-                                                                    <i>icon yêu thích</i>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="shop_item_content">
-                                                    <h3>tên sp</h3>
-                                                    <div class="shop_item_price">
-                                                        <div class="shop_special_price">
-                                                            <span>
-                                                                11000 Đ
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <?php } ?>
 
-                                            <!-- product 3 -->
-                                            <div class="shop_all_item">
-                                            <div class="shop_item_box">
-                                                <div class="shop_item_thumbnail">
-                                                    <a>
-                                                        <img>
-                                                    </a>
-                                                    <div class="shop_hover_item">
-                                                        <form>
-                                                            <div>
-                                                                <button>
-                                                                    <i>icon giỏ hàng</i>
-                                                                </button>
-                                                                <a>
-                                                                    <i>icon tăng</i>
-                                                                </a>
-                                                                <a>
-                                                                    <i>icon yêu thích</i>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="shop_item_content">
-                                                    <h3>tên sp</h3>
-                                                    <div class="shop_item_price">
-                                                        <div class="shop_special_price">
-                                                            <span>
-                                                                11000 Đ
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                            <!-- product 4 -->
-                                            <div class="shop_all_item">
-                                            <div class="shop_item_box">
-                                                <div class="shop_item_thumbnail">
-                                                    <a>
-                                                        <img>
-                                                    </a>
-                                                    <div class="shop_hover_item">
-                                                        <form>
-                                                            <div>
-                                                                <button>
-                                                                    <i>icon giỏ hàng</i>
-                                                                </button>
-                                                                <a>
-                                                                    <i>icon tăng</i>
-                                                                </a>
-                                                                <a>
-                                                                    <i>icon yêu thích</i>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="shop_item_content">
-                                                    <h3>tên sp</h3>
-                                                    <div class="shop_item_price">
-                                                        <div class="shop_special_price">
-                                                            <span>
-                                                                11000 Đ
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                            <!-- product 5 -->
-                                            <div class="shop_all_item">
-                                            <div class="shop_item_box">
-                                                <div class="shop_item_thumbnail">
-                                                    <a>
-                                                        <img>
-                                                    </a>
-                                                    <div class="shop_hover_item">
-                                                        <form>
-                                                            <div>
-                                                                <button>
-                                                                    <i>icon giỏ hàng</i>
-                                                                </button>
-                                                                <a>
-                                                                    <i>icon tăng</i>
-                                                                </a>
-                                                                <a>
-                                                                    <i>icon yêu thích</i>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="shop_item_content">
-                                                    <h3>tên sp</h3>
-                                                    <div class="shop_item_price">
-                                                        <div class="shop_special_price">
-                                                            <span>
-                                                                11000 Đ
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                            <!-- product 6 -->
-                                            <div class="shop_all_item">
-                                            <div class="shop_item_box">
-                                                <div class="shop_item_thumbnail">
-                                                    <a>
-                                                        <img>
-                                                    </a>
-                                                    <div class="shop_hover_item">
-                                                        <form>
-                                                            <div>
-                                                                <button>
-                                                                    <i>icon giỏ hàng</i>
-                                                                </button>
-                                                                <a>
-                                                                    <i>icon tăng</i>
-                                                                </a>
-                                                                <a>
-                                                                    <i>icon yêu thích</i>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="shop_item_content">
-                                                    <h3>tên sp</h3>
-                                                    <div class="shop_item_price">
-                                                        <div class="shop_special_price">
-                                                            <span>
-                                                                11000 Đ
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div>
                                         <div>
