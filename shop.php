@@ -189,9 +189,9 @@
                                                     <div class="shop_hover_item clear_fix">
                                                         <form class="shop_form_mini_card">
                                                             <div>
-                                                                <button class="shop_icon_minicss hover_green_icon">
+                                                                <a style="display: inline-block; color: #000;" href="./customer/process_add_or_buy.php?id=<?php echo $each['id_product'] ;?>&type=add"$ class="shop_icon_minicss hover_green_icon">
                                                                     <i class="fa-solid fa-cart-shopping"></i>
-                                                                </button>
+                                                                </a>
                                                                 <a style="display: inline-block;" class="shop_icon_minicss hover_green_icon">
                                                                     <i class="fa-solid fa-magnifying-glass"></i>
                                                                 </a>

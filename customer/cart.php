@@ -2,8 +2,11 @@
     session_start();
 
     if (empty($_SESSION['id_user'])) {
-        header('location: ../login.php');
+        header('location: ../login.php?not_exists_login');
     }
+
+    $cart = $_SESSION['cart'];
+    $sum_price = 0;
 ?>
 
 
@@ -54,6 +57,8 @@
                                     </tr>
                                 </thead>
                                 <tbody class="table_cart_form_content">
+
+                                    <?php foreach ($cart as $id_product_each => $each) { ?>
                                     <tr>
                                         <td>
                                             <label>
@@ -62,18 +67,22 @@
                                             </label>
                                         </td>
                                         <td style="width: 100px; height: 100%;">
-                                            <img src="../src/save_img_from_db/1694016276.jpg" style="width: 100%">
+                                            <img src="../src/save_img_from_db/<?php echo $each['img_product']; ?>" style="width: 100%">
                                         </td>
                                         <td>
-                                            <p>tên</p>
-                                            <small>Fugiat voluptates quasi nemo, ipsa perferendis</small>
+                                            <p><?php echo $each['name_product']; ?></p>
+                                            <small><?php echo $each['desc_product']; ?></small>
                                         </td>
-                                        <td style="text-align: center;">12 $</td>
+                                        <td style="text-align: center;"><?php echo $each['price_product']; ?> $</td>
                                         <td style="width: 10%;">
-                                            <input type="number"  class="input_cart_form_quantity">
+                                            <input type="number"  class="input_cart_form_quantity" value="<?php echo $each['quantity']; ?>">
                                         </td>
                                         <td style="text-align: center;">
-                                            24 $
+                                            <?php 
+                                                $price_new = $each['price_product'] * $each['quantity'];
+                                                echo $price_new; 
+                                                $sum_price = $sum_price + $price_new;
+                                            ?> $
                                         </td>
                                         <td>
                                             <a href="">
@@ -81,60 +90,8 @@
                                             </a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <label>
-                                                <input type="checkbox" checked>
-                                                <span></span>
-                                            </label>
-                                        </td>
-                                        <td style="width: 100px; height: 100%;">
-                                            <img src="../src/save_img_from_db/1694016276.jpg" style="width: 100%">
-                                        </td>
-                                        <td>
-                                            <p>tên</p>
-                                            <small>Fugiat voluptates quasi nemo, ipsa perferendis</small>
-                                        </td>
-                                        <td style="text-align: center;">12 $</td>
-                                        <td style="width: 10%;">
-                                            <input type="number"  class="input_cart_form_quantity">
-                                        </td>
-                                        <td style="text-align: center;">
-                                            24 $
-                                        </td>
-                                        <td>
-                                            <a href="">
-                                                <i class="fa-solid fa-xmark"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label>
-                                                <input type="checkbox" checked>
-                                                <span></span>
-                                            </label>
-                                        </td>
-                                        <td style="width: 100px; height: 100%;">
-                                            <img src="../src/save_img_from_db/1694016276.jpg" style="width: 100%">
-                                        </td>
-                                        <td>
-                                            <p>tên</p>
-                                            <small>Fugiat voluptates quasi nemo, ipsa perferendis</small>
-                                        </td>
-                                        <td style="text-align: center;">12 $</td>
-                                        <td style="width: 10%;">
-                                            <input type="number"  class="input_cart_form_quantity">
-                                        </td>
-                                        <td style="text-align: center;">
-                                            24 $
-                                        </td>
-                                        <td>
-                                            <a href="">
-                                                <i class="fa-solid fa-xmark"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    <?php } ?>
+
                                 </tbody>
                             </table>
                         </div>
@@ -143,9 +100,14 @@
                             <div class="form_submit_btn_position">
                                 <p>
                                     <span>Subtotal: </span>
-                                    <span>£80.22</span>
+                                    <span>
+                                        <?php 
+                                            
+                                            echo $sum_price;
+                                        ?> $
+                                    </span>
                                 </p>
-                                <a href="">Continue Shopping</a>
+                                <a href="shop.php">Continue Shopping</a>
                                 <input type="submit" name="update" value="Update cart" style="padding: 14px 34px;">
                                 <input type="submit" name="check_out" value="Check out" style="padding: 14px 34px;">
                             </div>

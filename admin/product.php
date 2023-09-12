@@ -96,7 +96,6 @@
 
                                                 $row = mysqli_fetch_assoc($result_n_producer);
                                                 echo $row['name_producer'];
-                                                mysqli_close($connect);
 
                                             ?>
                                         </a>
