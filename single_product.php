@@ -115,7 +115,7 @@
                                                 <input type="radio" id="size_two" value="2">
                                             </div>
                                         </div> -->
-                                        <div>
+                                        <!-- <div>
                                             <label class="single_shop_size_title">
                                                 Quantity:
                                             </label>
@@ -124,10 +124,10 @@
                                                 <input class="input_number_quanti" type="number">
                                                 <input class="increase btn_quanti" value="+">
                                             </div>
-                                        </div>
-                                        <button class="btn btn_sshop">
+                                        </div> -->
+                                        <a href="login.php" class="btn btn_sshop">
                                             add to card
-                                        </button>
+                                        </a>
                                         <a class="btn btn_sshop" href="shop.php">back to shop</a>
                                     </form>
                                 </div>

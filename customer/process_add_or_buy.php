@@ -27,7 +27,7 @@ if ($type_product_each === 'add') {
     } else {
         $_SESSION['cart'][$id_product_each]['quantity']++;
     }
-    header('location: shop.php');
+    header('location: cart.php');
 } else if ($type_product_each === 'buy') {
 
 }

@@ -7,6 +7,7 @@
 
     $cart = $_SESSION['cart'];
     $sum_price = 0;
+    
 ?>
 
 
@@ -43,7 +44,7 @@
                 <div class="table_cart">
                     <h3 class="table_cart_tittle">Your cart</h3>
 
-                    <form class="table_cart_form">
+                    <form action="form_cart.php" class="table_cart_form" method="post">
                         <div>
                             <table class="table_cart_form_main">
                                 <thead class="table_cart_form_tittle">
@@ -110,8 +111,8 @@
                                     </span>
                                 </p>
                                 <a href="shop.php">Continue Shopping</a>
-                                <a href="" >Update cart</a>
-                                <a href="form_cart.php">Check out</a>
+                                <a href="">Update cart</a>
+                                <button style="padding: 14px 14px !important;">Check out</button>
                             </div>
                         </div>
                     </form>

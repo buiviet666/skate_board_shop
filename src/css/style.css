@@ -647,7 +647,7 @@ body {
 
 
 .table_cart .form_submit_btn_position a,
-.table_cart .form_submit_btn_position input {
+.table_cart .form_submit_btn_position button {
     border: 1px solid black;
     background: none;
     color: #000000;
@@ -662,7 +662,7 @@ body {
 }
 
 .table_cart .form_submit_btn_position a:hover,
-.table_cart .form_submit_btn_position input:hover {
+.table_cart .form_submit_btn_position button:hover {
     background-color: #05C59C;
     color: #fff;
     border: none;

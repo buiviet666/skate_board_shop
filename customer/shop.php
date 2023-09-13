@@ -223,10 +223,10 @@
                                         <?php } ?>
 
                                     </div>
-                                    <div>
+                                    <!-- <div>
                                         <div>
                                             <ul class="shop_pagination">
-                                                <!-- back -->
+                                                
                                                 <li>
                                                     <a><<</a>
                                                 </li>
@@ -241,13 +241,13 @@
                                                     <a>3</a>
                                                 </li>
 
-                                                <!-- next -->
+                                                
                                                 <li>
                                                     <a>>></a>
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>

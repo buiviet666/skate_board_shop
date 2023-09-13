@@ -1,5 +1,4 @@
 <?php 
-
     require 'admin/connect.php';
     $sql_product = "select * from product";
     $result_product = mysqli_query($connect, $sql_product);
@@ -189,7 +188,7 @@
                                                     <div class="shop_hover_item clear_fix">
                                                         <form class="shop_form_mini_card">
                                                             <div>
-                                                                <a style="display: inline-block; color: #000;" href="./customer/process_add_or_buy.php?id=<?php echo $each['id_product'] ;?>&type=add"$ class="shop_icon_minicss hover_green_icon">
+                                                                <a style="display: inline-block; color: #000;" href="login.php" class="shop_icon_minicss hover_green_icon">
                                                                     <i class="fa-solid fa-cart-shopping"></i>
                                                                 </a>
                                                                 <a style="display: inline-block;" class="shop_icon_minicss hover_green_icon">
@@ -222,10 +221,10 @@
                                         <?php } ?>
 
                                     </div>
-                                    <div>
+                                    <!-- <div>
                                         <div>
                                             <ul class="shop_pagination">
-                                                <!-- back -->
+                                                
                                                 <li>
                                                     <a><<</a>
                                                 </li>
@@ -240,13 +239,13 @@
                                                     <a>3</a>
                                                 </li>
 
-                                                <!-- next -->
+                                                
                                                 <li>
                                                     <a>>></a>
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
