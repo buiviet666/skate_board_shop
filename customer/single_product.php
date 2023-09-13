@@ -8,6 +8,8 @@
     $sql_id_product = "select * from product where id_product = '$id_product'";
     $result_id_product = mysqli_query($connect, $sql_id_product);
     $each = mysqli_fetch_array($result_id_product);
+
+    $cart = $_SESSION['cart'];
 ?>
 
 <!DOCTYPE html>
@@ -117,19 +119,19 @@
                                                 <input type="radio" id="size_two" value="2">
                                             </div>
                                         </div> -->
-                                        <div>
+                                        <!-- <div>
                                             <label class="single_shop_size_title">
                                                 Quantity:
                                             </label>
                                             <div class="single_shop_quantity">
-                                                <input class="decrease btn_quanti" value="-">
-                                                <input class="input_number_quanti" type="number">
-                                                <input class="increase btn_quanti" value="+">
+                                                <a href="" class="decrease btn_quanti" value="-"></a>
+                                                <input class="input_number_quanti" type="number" value="">
+                                                <a href="" class="increase btn_quanti" value="+"></a>
                                             </div>
-                                        </div>
-                                        <button class="btn btn_sshop">
+                                        </div> -->
+                                        <a href="process_add_or_buy.php?id=<?php echo $id_product ;?>&type=add"$ class="btn btn_sshop">
                                             add to card
-                                        </button>
+                                        </a>
                                         <a class="btn btn_sshop" href="shop.php">back to shop</a>
                                     </form>
                                 </div>
@@ -139,7 +141,7 @@
                     <div class="single_shop_descrip">
                         <h3>Description</h3>
                         <p>
-                            <?php echo $each['number_product']; ?>
+                            <?php echo $each['desc_product']; ?>
                         </p>
                     </div>
                     <div class="single_shop_ship_pos">

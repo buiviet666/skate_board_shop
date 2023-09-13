@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../src/css/nomalize.css">
     <link rel='stylesheet' type='text/css' href='../src/css/style.css'/>
     <link rel="stylesheet" href="../src/css/media.css">
+    <link rel="stylesheet" href="../src/css/single.css">
     <title>Skateboard life</title>
     <link rel="shortcut icon" href="../src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -57,7 +58,6 @@
                                     </tr>
                                 </thead>
                                 <tbody class="table_cart_form_content">
-
                                     <?php foreach ($cart as $id_product_each => $each) { ?>
                                     <tr>
                                         <td>
@@ -74,8 +74,10 @@
                                             <small><?php echo $each['desc_product']; ?></small>
                                         </td>
                                         <td style="text-align: center;"><?php echo $each['price_product']; ?> $</td>
-                                        <td style="width: 10%;">
-                                            <input type="number"  class="input_cart_form_quantity" value="<?php echo $each['quantity']; ?>">
+                                        <td class="table_incre_decre">
+                                            <a href="process_update_btn.php?id=<?php echo $id_product_each ?>&type=increase" class="decrease btn_quanti">+</a>
+                                            <input type="number" class="input_cart_form_quantity" value="<?php echo $each['quantity']; ?>">
+                                            <a href="process_update_btn.php?id=<?php echo $id_product_each ?>&type=decrease" class="increase btn_quanti">-</a>
                                         </td>
                                         <td style="text-align: center;">
                                             <?php 
@@ -85,7 +87,7 @@
                                             ?> $
                                         </td>
                                         <td>
-                                            <a href="">
+                                            <a href="process_del_product.php?id=<?php echo $id_product_each ?>">
                                                 <i class="fa-solid fa-xmark"></i>
                                             </a>
                                         </td>
@@ -108,8 +110,8 @@
                                     </span>
                                 </p>
                                 <a href="shop.php">Continue Shopping</a>
-                                <input type="submit" name="update" value="Update cart" style="padding: 14px 34px;">
-                                <input type="submit" name="check_out" value="Check out" style="padding: 14px 34px;">
+                                <a href="" >Update cart</a>
+                                <a href="form_cart.php">Check out</a>
                             </div>
                         </div>
                     </form>

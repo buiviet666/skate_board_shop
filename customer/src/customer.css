@@ -1,0 +1,37 @@
+.form_cart {
+    position: relative;
+    display: flex;
+}
+
+.form_cart .form_cart_info {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    background-color: #1D0F0F;
+    color: #fff;
+    height: 100vh;
+}
+
+.form_cart .form_cart_container {
+    padding: 55px 66px 21px;
+    display: grid;
+    width: 70%;
+}
+
+.form_cart .form_cart_tittle a {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.form_cart .form_cart_info-form {
+
+}
+
+.form_cart .form_cart_footer-end {
+
+}
+
+.form_cart .form_cart_product_info {
+    display: flex;
+    width: 600%;
+}
