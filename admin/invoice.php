@@ -3,9 +3,12 @@
 
     if (empty($_SESSION['id_user'])) {
         header('location:login.php');
-    } else {
-        echo 'hi';
     }
+
+    require "connect.php";
+
+    $sql_invoice = "select * from hoadon";
+    $result_sql_invoice = mysqli_query($connect, $sql_invoice);
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/css/nomalize.css">
+    <link rel="stylesheet" href="src/css/tabledata.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
     <link rel="stylesheet" href="src/css/admincss.css">
@@ -31,8 +35,50 @@
 
                 <!-- content -->
                 <div class="main-container">
-                    <div class="main-header anim" style="--delay: 0s">day la trang hoa don</div>
+                    <div class="main-header anim" style="--delay: 0s">CRUD invoice</div>
                     
+
+                    <div class="table_data">
+                        <table class="table_data_main">
+                            <thead class="table_data_tittle">
+                                <tr>
+                                    <th>id</th>
+                                    <th>id đơn hàng</th>
+                                    <th>ngày lập</th>
+                                    <th>tổng tiền</th>
+                                    <th>delete</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table_data_content">
+                                
+                                <?php foreach ($result_sql_invoice as $each_invoice) { ?>
+                                
+                                <tr>
+                                    <td>
+                                        <?php echo $each_invoice['id_hoadon']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $each_invoice['id_donhang']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $each_invoice['ngaylap_hoadon']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $each_invoice['tongtien']; ?>
+                                    </td>
+                                    <td>
+                                        <a href="invoice/process_del_invoice.php?id=<?php echo $each_invoice['id_hoadon'] ?>">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
+
+
                 </div>
             </div>
         </div>

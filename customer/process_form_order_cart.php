@@ -28,13 +28,9 @@ $query_2 = "select max(id_donhang) from donhang where id_user = '$id_user'";
 $result = mysqli_query($connect,$query_2);
 $id_order = mysqli_fetch_array($result)['max(id_donhang)'];
 
-
-
-foreach ($cart as $id_product => $each) {
-    $query3 = "insert into hoadon (id_product,tongtien) 
-    values ('$id_product','$total_price');";
-    mysqli_query($connect,$query3);
-}
+$query3 = "insert into hoadon (id_donhang,tongtien) 
+values ('$id_order','$total_price');";
+mysqli_query($connect,$query3);
 
 mysqli_close($connect);
 unset($_SESSION['cart']);

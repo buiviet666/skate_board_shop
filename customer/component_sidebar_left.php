@@ -7,7 +7,7 @@
                 <div class="header_login_signup">
                     <ul>
                         <li class = "register" style="color: #fff">
-                            hi <a href = "user.php">
+                            hi <a href = "user.php?id=<?php echo $_SESSION['id_user'] ?>">
                                 <?php
                                     echo $_SESSION['ten_user'];
                                 ?>
