@@ -12,6 +12,13 @@
     $sql_producer = "select * from producer";
     $result_producer = mysqli_query($connect, $sql_producer);
 
+    if (isset($_POST['searchInput'])) {
+        $searchTerm = $_POST['searchInput'];
+
+        $sql_product = "select * from product where name_product like '%$searchTerm%'";
+        $result_product = mysqli_query($connect, $sql_product);
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -37,9 +44,11 @@
             <div class="wrapper">
                 <!-- header -->
                 <div class="header">
-                    <div class="search-bar">
-                        <input type="text" placeholder="Search">
-                    </div>
+                    <form action="product.php" method="post">
+                        <div class="search-bar">
+                            <input type="text" placeholder="Search" name="searchInput">
+                        </div>
+                    </form>
                     <div class="user-settings">
                         <img class="user-img" src="https://images.unsplash.com/photo-1587918842454-870dbd18261a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=943&q=80" alt="">
                         <div class="user-name">
@@ -321,5 +330,6 @@
 
     <script src="src/javascript/adminjs.js"></script>
     <script src="../src/javascript/index.js"></script>
+    <script src="src/javascript/search_input.js"></script>
 </body>
 </html>

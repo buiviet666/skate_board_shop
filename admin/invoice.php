@@ -9,6 +9,13 @@
 
     $sql_invoice = "select * from hoadon";
     $result_sql_invoice = mysqli_query($connect, $sql_invoice);
+
+    if (isset($_POST['searchInput'])) {
+        $searchTerm = $_POST['searchInput'];
+
+        $sql_invoice = "select * from hoadon ngaylap_hoadon like '%$searchTerm%'";
+        $result_sql_invoice = mysqli_query($connect, $sql_invoice);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +38,26 @@
 
             <div class="wrapper">
                 <!-- header -->
-                <?php include "component_header.php" ?>
+                <div class="header">
+                    <form action="invoice.php" method="post">
+                        <div class="search-bar">
+                            <input type="text" placeholder="Search" name="searchInput">
+                        </div>
+                    </form>
+                    <div class="user-settings">
+                        <img class="user-img" src="https://images.unsplash.com/photo-1587918842454-870dbd18261a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=943&q=80" alt="">
+                        <div class="user-name">
+                            <?php
+                                echo $_SESSION['ten_admin'];
+                            ?>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <div class="notify">
+                            <div class="notification"></div>
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- content -->
                 <div class="main-container">
