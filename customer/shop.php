@@ -1,12 +1,104 @@
 <?php 
     session_start();
-    
+
     require 'connect.php';
-    $sql_product = "select * from product";
+    
+    // Kiểm tra xem người dùng đã chọn sắp xếp theo và lấy giá trị
+    $sort_by = isset($_GET['sort_by']) ? $_GET['sort_by'] : 'default';
+
+    // Xây dựng truy vấn SQL cho sắp xếp
+    switch ($sort_by) {
+        case 'az':
+            $sort_sql = "ORDER BY name_product ASC";
+            break;
+        case 'za':
+            $sort_sql = "ORDER BY name_product DESC";
+            break;
+        case 'price_asc':
+            $sort_sql = "ORDER BY price_product ASC";
+            break;
+        case 'price_desc':
+            $sort_sql = "ORDER BY price_product DESC";
+            break;
+        default:
+            $sort_sql = ""; // Sắp xếp mặc định hoặc không sắp xếp
+            break;
+    }
+
+    $sql_product = "select * from product $sort_sql";
     $result_product = mysqli_query($connect, $sql_product);
 
     $sql_producer = "select * from producer";
     $result_producer = mysqli_query($connect, $sql_producer);
+
+    // sau khi ấn => lọc sản phẩm
+    if (isset($_GET['filter']) && $_GET['filter'] === 'deck') {
+        $sql = "SELECT * FROM product WHERE type_product = 'deck'";
+        $result_product = mysqli_query($connect, $sql);
+    } else if (isset($_GET['filter']) && $_GET['filter'] === 'truck') {
+        $sql = "SELECT * FROM product WHERE type_product = 'truck'";
+        $result_product = mysqli_query($connect, $sql);
+    } else if (isset($_GET['filter']) && $_GET['filter'] === 'weel') {
+        $sql = "SELECT * FROM product WHERE type_product = 'weel'";
+        $result_product = mysqli_query($connect, $sql);
+    } else if (isset($_GET['filter']) && $_GET['filter'] === 'tool') {
+        $sql = "SELECT * FROM product WHERE type_product = 'tool'";
+        $result_product = mysqli_query($connect, $sql);
+    } else if (isset($_GET['filter']) && $_GET['filter'] === 'shirt') {
+        $sql = "SELECT * FROM product WHERE type_product = 'shirt'";
+        $result_product = mysqli_query($connect, $sql);
+    } else if (isset($_GET['filter']) && $_GET['filter'] === 'trousers') {
+        $sql = "SELECT * FROM product WHERE type_product = 'trousers'";
+        $result_product = mysqli_query($connect, $sql);
+    } else if (isset($_GET['filter']) && $_GET['filter'] === 'shoe') {
+        $sql = "SELECT * FROM product WHERE type_product = 'shoe'";
+        $result_product = mysqli_query($connect, $sql);
+    }
+
+
+    // sau khi ấn => thay đổi count
+    if (isset($_GET['filter']) && $_GET['filter'] === 'deck') {
+        $sql_count = "SELECT COUNT(*) AS total_rows FROM product WHERE type_product = 'deck'";
+        $result_count_product = mysqli_query($connect, $sql_count);
+        $rows = mysqli_fetch_array($result_count_product);
+        $total_rows = $rows['total_rows'];
+    } else if (isset($_GET['filter']) && $_GET['filter'] === 'truck') {
+        $sql_count = "SELECT COUNT(*) AS total_rows FROM product WHERE type_product = 'truck'";
+        $result_count_product = mysqli_query($connect, $sql_count);
+        $rows = mysqli_fetch_array($result_count_product);
+        $total_rows = $rows['total_rows'];
+    } else if (isset($_GET['filter']) && $_GET['filter'] === 'weel') {
+        $sql_count = "SELECT COUNT(*) AS total_rows FROM product WHERE type_product = 'weel'";
+        $result_count_product = mysqli_query($connect, $sql_count);
+        $rows = mysqli_fetch_array($result_count_product);
+        $total_rows = $rows['total_rows'];
+    } else if (isset($_GET['filter']) && $_GET['filter'] === 'tool') {
+        $sql_count = "SELECT COUNT(*) AS total_rows FROM product WHERE type_product = 'tool'";
+        $result_count_product = mysqli_query($connect, $sql_count);
+        $rows = mysqli_fetch_array($result_count_product);
+        $total_rows = $rows['total_rows'];
+    } else if (isset($_GET['filter']) && $_GET['filter'] === 'shirt') {
+        $sql_count = "SELECT COUNT(*) AS total_rows FROM product WHERE type_product = 'shirt'";
+        $result_count_product = mysqli_query($connect, $sql_count);
+        $rows = mysqli_fetch_array($result_count_product);
+        $total_rows = $rows['total_rows'];
+    } else if (isset($_GET['filter']) && $_GET['filter'] === 'trousers') {
+        $sql_count = "SELECT COUNT(*) AS total_rows FROM product WHERE type_product = 'trousers'";
+        $result_count_product = mysqli_query($connect, $sql_count);
+        $rows = mysqli_fetch_array($result_count_product);
+        $total_rows = $rows['total_rows'];
+    } else if (isset($_GET['filter']) && $_GET['filter'] === 'shoe') {
+        $sql_count = "SELECT COUNT(*) AS total_rows FROM product WHERE type_product = 'shoe'";
+        $result_count_product = mysqli_query($connect, $sql_count);
+        $rows = mysqli_fetch_array($result_count_product);
+        $total_rows = $rows['total_rows'];
+    } else {
+        // Nếu không áp dụng bộ lọc, đếm tất cả sản phẩm
+        $sql_count = "SELECT COUNT(*) AS total_rows FROM product";
+        $result_count_product = mysqli_query($connect, $sql_count);
+        $rows = mysqli_fetch_array($result_count_product);
+        $total_rows = $rows['total_rows'];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -62,10 +154,18 @@
                                             <a class="down_product_sk8">Skateboard</a>
                                             <i class="shop_down_icon fa-solid fa-chevron-down"></i>
                                             <ul class="shop_dropdown-menu list_down_product_sk8">
-                                                <li>ván</li>
-                                                <li>truck</li>
-                                                <li>bánh</li>
-                                                <li>dụng cụ</li>
+                                                <li>
+                                                    <a href="shop.php?filter=deck">deck</a>
+                                                </li>
+                                                <li>
+                                                    <a href="shop.php?filter=truck">truck</a>
+                                                </li>
+                                                <li>
+                                                    <a href="shop.php?filter=weel">weel</a>
+                                                </li>
+                                                <li>
+                                                    <a href="shop.php?filter=tool">tool</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li>
@@ -73,9 +173,15 @@
                                             <a class="down_clother_sk8">Phụ kiện</a>
                                             <i class="shop_down_icon fa-solid fa-chevron-down"></i>
                                             <ul class="shop_dropdown-menu list_down_clother_sk8">
-                                                <li>áo</li>
-                                                <li>quần</li>
-                                                <li>giày</li>
+                                                <li>
+                                                    <a href="shop.php?filter=shirt">shirt</a>
+                                                </li>
+                                                <li>
+                                                    <a href="shop.php?filter=trousers">trousers</a>
+                                                </li>
+                                                <li>
+                                                    <a href="shop.php?filter=shoe">shoe</a>
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -116,17 +222,7 @@
                                                     kết quả lọc
                                                 </h1>
                                                 <span>
-                                                    (
-                                                    <?php 
-                                                        $sql = "SELECT COUNT(*) AS total_rows FROM product";
-                                                        $result_count_product = mysqli_query($connect, $sql);
-
-                                                        $rows = mysqli_fetch_array($result_count_product);
-                                                        $total_rows = $rows['total_rows'];
-
-                                                        echo $total_rows;
-                                                    ?>
-                                                    sản phẩm)
+                                                    ( <?php echo $total_rows; ?> sản phẩm)
                                                 </span>
                                             </div>
                                         </div>
@@ -143,27 +239,27 @@
                                                         <i class="fa-solid fa-chevron-down"></i>
                                                         <ul class="shop_sort_down">
                                                             <li>
-                                                                <a>
+                                                                <a href="shop.php?filter=skateboard&sort_by=default">
                                                                     Mặc định
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a>
+                                                                <a href="shop.php?filter=skateboard&sort_by=az">
                                                                     A -> Z
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a>
+                                                                <a href="shop.php?filter=skateboard&sort_by=za">
                                                                     Z -> A
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a>
+                                                                <a href="shop.php?filter=skateboard&sort_by=price_asc">
                                                                     Giá tăng dần
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a>
+                                                                <a href="shop.php?filter=skateboard&sort_by=price_desc">
                                                                     Giá giảm dần
                                                                 </a>
                                                             </li>

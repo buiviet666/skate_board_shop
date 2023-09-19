@@ -30,12 +30,12 @@
                 <div class="inpage">
                     <h3>Sign In</h3>
                     <div class="inpage_container">
-                        <form class="inpage_form" action="process_signin.php" method="post">
-                            <input type="text" placeholder="Your Name" name="name_user">
-                            <input type="text" placeholder="User Name" name="login_user">
-                            <input type="password" placeholder="Password" name="password_user">
-                            <input type="number" placeholder="Phone Number" name="phone_user">
-                            <input type="email" placeholder="Email Address" name="email_user">
+                        <form class="inpage_form" action="process_signin.php" method="post" onsubmit="return validateFormSignin()">
+                            <input type="text" placeholder="Your Name" name="name_user" id="name_user">
+                            <input type="text" placeholder="User Name" name="login_user" id="login_user">
+                            <input type="password" placeholder="Password" name="password_user" id="password_user">
+                            <input type="number" placeholder="Phone Number" name="phone_user" id="phone_user">
+                            <input type="email" placeholder="Email Address" name="email_user" id="email_user">
 
                             <p>
                                 <input class="btn_inpage" type="submit" value="Create">
@@ -53,5 +53,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.17/fullpage.min.js" integrity="sha512-zAHJKGyoPf2Y20Wi4uo32sa/vSvwKfY4tYUt6gJfmkA79X0wt5ZfaxL5GqJ5cMnmvGslWi5PKTo51rHRZqYbJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="src/javascript/index.js"></script>
+    <script src="src/javascript/validation.js"></script>
 </body>
 </html> 

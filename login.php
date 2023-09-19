@@ -30,9 +30,9 @@
                 <div class="inpage">
                     <h3>Login In</h3>
                     <div class="inpage_container">
-                        <form class="inpage_form" action="process_login.php" method="post">
-                            <input type="text" placeholder="Username" name="login_user">
-                            <input type="text" placeholder="Password" name="password_user">
+                        <form class="inpage_form" action="process_login.php" method="post" onsubmit="return validateFormLogin()">
+                            <input type="text" placeholder="Username" name="login_user" id="username">
+                            <input type="text" placeholder="Password" name="password_user" id="password">
 
                             <a class="inpage_link" href="#">Forgot your password?</a>
                             
@@ -54,5 +54,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.17/fullpage.min.js" integrity="sha512-zAHJKGyoPf2Y20Wi4uo32sa/vSvwKfY4tYUt6gJfmkA79X0wt5ZfaxL5GqJ5cMnmvGslWi5PKTo51rHRZqYbJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="src/javascript/index.js"></script>
+    <script src="src/javascript/validation.js"></script>
 </body>
 </html> 

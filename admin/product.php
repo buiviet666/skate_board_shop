@@ -36,7 +36,24 @@
 
             <div class="wrapper">
                 <!-- header -->
-                <?php include "component_header.php" ?>
+                <div class="header">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <div class="user-settings">
+                        <img class="user-img" src="https://images.unsplash.com/photo-1587918842454-870dbd18261a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=943&q=80" alt="">
+                        <div class="user-name">
+                            <?php
+                                echo $_SESSION['ten_admin'];
+                            ?>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <div class="notify">
+                            <div class="notification"></div>
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- content -->
                 <div class="main-container">
@@ -142,7 +159,7 @@
                                                                 <span></span>
                                                             </div>
                                                             <div class="input_position">
-                                                                <input id="input_value_fix_producer" type="text" name="name_fix_producer" required />
+                                                                <input id="input_value_fix_producer" type="text" name="name_fix_producer"/>
                                                                 <input id="id_fix_producer" type="hidden" name="id_fix_producer" />
                                                                 <p>Tên nhà sản xuất</p>
                                                                 <span></span>
@@ -151,7 +168,7 @@
                                                                     <li>
                                                                         <?php foreach ($result_producer as $each_producer) { ?>
                                                                         <li>
-                                                                            <a data-id_fix="<?php echo $each_producer['id_producer']; ?>" data-name_fix="<?php echo $each_producer['name_producer']; ?>" class="fill-fix_input" style="color: #363636 !important;">
+                                                                            <a data-id="<?php echo $each_producer['id_producer']; ?>" data-name="<?php echo $each_producer['name_producer']; ?>" class="fill-fix_input" style="color: #363636 !important;">
                                                                                 <?php echo $each_producer['name_producer']; ?>
                                                                             </a>
                                                                         </li>
@@ -178,7 +195,7 @@
                                                                     <input type="submit" class="btn btn-cancel" value="sửa">
                                                                 </div>
                                                                 <div class="delet-confirm-wrapper">
-                                                                    <a class="btn btn-confirm" onclick="hideModal(event, <?php echo $each['id_product']; ?>)" style="color: color: #d02b20 !important;">
+                                                                    <a class="btn btn-confirm" onclick="hideModalfix(event, <?php echo $each['id_product']; ?>)" style="color: color: #d02b20 !important;">
                                                                         <i class="fa-solid fa-trash"></i>
                                                                         Hủy
                                                                     </a>

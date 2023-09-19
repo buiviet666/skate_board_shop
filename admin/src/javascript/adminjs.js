@@ -34,7 +34,7 @@ function getId(event, id_product) {
 }
 
 // click => ẩn form sửa sản phẩm
-function hideModal(event, id_product) {
+function hideModalfix(event, id_product) {
     event.preventDefault();
 
     // Tạo id của phần tử modal tương ứng
@@ -78,13 +78,16 @@ fillfixInputLinks.forEach(function (link) {
         event.preventDefault(); // Ngăn chặn liên kết điều hướng
 
         // Lấy giá trị 'id_producer' và 'name_producer' từ thuộc tính dữ liệu của phần tử anchor đã nhấp
-        const dataIdfix = link.getAttribute("data-id_fix");
-        const dataNamefix = link.getAttribute("data-name_fix");
+        const dataIdfix = link.getAttribute("data-id");
+        const dataNamefix = link.getAttribute("data-name");
 
         // Đặt giá trị của trường input 'input_value_producer' thành 'name_producer' (hiển thị)
         // và giá trị của trường input ẩn 'id_producer' thành 'id_producer' (giá trị)
-        inputfixProducer.value = dataNamefix;
         inputfixIdProducer.value = dataIdfix;
+        inputfixProducer.value = dataNamefix;
+
+        console.log("Đã chọn dataIdfix:", dataIdfix);
+        console.log("Đã chọn dataNamefix:", dataNamefix);
     });
 });
 // ------------------------HẾT SẢN PHẨM---
@@ -130,11 +133,11 @@ function getId_customer(event, id_customer) {
 }
 
 // click => ẩn form sửa nhân viên
-function hideModal(event, id_customer) {
+function hideModalcustomer(event, id_customer) {
     event.preventDefault();
 
     // Tạo id của phần tử modal tương ứng
-    var modalId = "modal_employee-" + id_customer;
+    var modalId = "modal_customer-" + id_customer;
 
     // Lấy phần tử modal dựa trên id
     var modal = document.getElementById(modalId);

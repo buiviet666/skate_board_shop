@@ -154,7 +154,7 @@
                                                                     <input type="submit" class="btn btn-cancel" value="tạo">
                                                                 </div>
                                                                 <div class="delet-confirm-wrapper">
-                                                                    <a class="btn btn-confirm" onclick="hideModal(event, <?php echo $each_customer['id_user']; ?>)" style="color: color: #d02b20 !important;">
+                                                                    <a class="btn btn-confirm" onclick="hideModalcustomer(event, <?php echo $each_customer['id_user']; ?>)" style="color: color: #d02b20 !important;">
                                                                         <i class="fa-solid fa-trash"></i>
                                                                         Hủy
                                                                     </a>
