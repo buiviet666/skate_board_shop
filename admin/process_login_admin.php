@@ -1,11 +1,11 @@
-<?php 
+<?php
 
 $username_admin = addslashes($_POST['username_admin']);
 $password_admin = addslashes($_POST['password_admin']);
 
 require 'connect.php';
 
-$sql = "select id_user, ten_user from users where username_user = '$username_admin' and password_user = '$password_admin'";
+$sql = "SELECT id_user, ten_user FROM users WHERE username_user = '$username_admin' AND password_user = '$password_admin' AND id_roles = 1";
 $result = mysqli_query($connect, $sql);
 
 $number_row = mysqli_num_rows($result);
@@ -28,7 +28,7 @@ if ($number_row == 1) {
 } else {
     echo 
     '<script type="text/javascript">
-        alert("Tên tài khoản hoặc mật khẩu không đúng");
+        alert("Tên tài khoản hoặc mật khẩu không đúng hoặc bạn không có quyền truy cập.");
         location="login.php";
     </script>';
     exit;
@@ -36,3 +36,4 @@ if ($number_row == 1) {
 
 // close connect
 mysqli_close($connect);
+?>

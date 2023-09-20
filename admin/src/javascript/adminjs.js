@@ -145,3 +145,56 @@ function hideModalcustomer(event, id_customer) {
     modal.classList.remove("show");
 }
 // -----------------------HẾT KHÁCH HÀNG---
+
+// ---------------------------------BLOG---
+// click icon => form sửa nhân viên
+function getId_blog(event, id_blog) {
+    event.preventDefault();
+    // In ra giá trị id
+    // console.log("ID của liên kết là: " + id_employee);
+
+    let modalId = "modal_fix_blog-" + id_blog;
+    let modal = document.getElementById(modalId);
+    modal.classList.add("show");
+}
+
+// click => ẩn form sửa nhân viên
+function hideModalfixBlog(event, id_blog) {
+    event.preventDefault();
+
+    // Tạo id của phần tử modal tương ứng
+    var modalId = "modal_fix_blog-" + id_blog;
+
+    // Lấy phần tử modal dựa trên id
+    var modal = document.getElementById(modalId);
+
+    modal.classList.remove("show");
+}
+// --------------------------------HẾT BLOG---
+
+
+// ---------------------------------ORDER---
+// click icon => form sửa nhân viên
+function getId_order(event, id_donhang) {
+    event.preventDefault();
+    // In ra giá trị id
+    // console.log("ID của liên kết là: " + id_employee);
+
+    let modalId = "modal_fix_order-" + id_donhang;
+    let modal = document.getElementById(modalId);
+    modal.classList.add("show");
+}
+
+// click => ẩn form sửa nhân viên
+function hideModalfixOrder(event, id_donhang) {
+    event.preventDefault();
+
+    // Tạo id của phần tử modal tương ứng
+    var modalId = "modal_fix_order-" + id_donhang;
+
+    // Lấy phần tử modal dựa trên id
+    var modal = document.getElementById(modalId);
+
+    modal.classList.remove("show");
+}
+// --------------------------------HẾT ORDER---

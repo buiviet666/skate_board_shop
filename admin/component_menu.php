@@ -26,6 +26,11 @@
                 Product Management
             </a>
 
+            <a class="sidebar-link" href="order.php">
+                <i class="db_icon fa-solid fa-newspaper"></i>
+                Order management
+            </a>
+
             <a class="sidebar-link" href="invoice.php">
                 <i class="db_icon fa-solid fa-receipt"></i>
                 Invoice Management
@@ -41,15 +46,21 @@
     <div class="side-wrapper">
         <div class="side-title">SETTING</div>
         <div class="side-menu">
-            <a class="sidebar-link" href="process_logout_admin.php">
+            <a class="sidebar-link" href="process_logout_admin.php" onclick="return confirmLogout();">
                 <i class="db_icon fa-solid fa-gear"></i>
                 Log Out
             </a>
 
-            <a class="sidebar-link" href="privacy.php">
+            <!-- <a class="sidebar-link" href="privacy.php">
                 <i class="db_icon fa-solid fa-file-contract"></i>
                 Privacy
-            </a>
+            </a> -->
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    function confirmLogout() {
+        return confirm("Are you sure you want to log out?");
+    }
+</script>
