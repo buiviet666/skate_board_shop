@@ -6,7 +6,7 @@
     } 
 
     require 'connect.php';
-    $sql_order = "SELECT donhang.id_donhang, donhang.address_donhang, donhang.phone_donhang, donhang.email_donhang, donhang.trangthai_donhang, donhang.soluong_sanpham, users.ten_user
+    $sql_order = "SELECT donhang.id_donhang, donhang.address_donhang, donhang.phone_donhang, donhang.email_donhang, donhang.trangthai_donhang, donhang.soluong_sanpham, users.ten_user, users.id_user
     FROM donhang
     JOIN users ON donhang.id_user = users.id_user;";
     $result_order = mysqli_query($connect, $sql_order);
@@ -121,6 +121,7 @@
 
                                                         <main>
                                                             <input style="display: none;" type="number" name="id_donhang" value="<?php echo $each['id_donhang']; ?>" />
+                                                            <input style="display: none;" type="number" name="id_user" value="<?php echo $each['id_user']; ?>" />
                                                             <div class="input_position">
                                                                 <input type="text" name="ten_user" value="<?php echo $each['ten_user']; ?>" required />
                                                                 <p>Tên người nhận</p>
