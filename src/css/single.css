@@ -373,18 +373,10 @@
 
 .shop .shop_manufac_product li {
     margin: 0;
-    cursor: pointer;
     line-height: 2.5em;
     min-width: 100%;
     float: left;
     padding-right: 8px;
-}
-
-.shop .shop_manufac_product label {
-    display: block;
-    margin-bottom: 2px;
-    cursor: pointer;
-    font-size: 18px;
 }
 
 .shop .shop_manufac_product label input {

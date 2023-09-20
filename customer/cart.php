@@ -5,7 +5,6 @@
         header('location: ../login.php?not_exists_login');
     }
 
-    $cart = $_SESSION['cart'];
     $sum_price = 0;
     
 ?>
@@ -59,7 +58,12 @@
                                     </tr>
                                 </thead>
                                 <tbody class="table_cart_form_content">
-                                    <?php foreach ($cart as $id_product_each => $each) { ?>
+                                    <?php 
+                                    if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
+                                        echo '<tr><td colspan="7" style="text-align: center;">Hiện đang không có sản phẩm</td></tr>';
+                                    } else {
+                                        $cart = $_SESSION['cart']; // Lấy giỏ hàng
+                                        foreach ($cart as $id_product_each => $each) { ?>
                                     <tr>
                                         <td>
                                             <label>
@@ -93,6 +97,7 @@
                                             </a>
                                         </td>
                                     </tr>
+                                    <?php } ?>
                                     <?php } ?>
 
                                 </tbody>

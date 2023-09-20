@@ -200,10 +200,7 @@
                                         <?php foreach ($result_producer as $eacher) { ?>
                                         <li>
                                             <span>
-                                                <label for="<?php echo $eacher['id_producer']; ?>">
-                                                    <input type="checkbox" id="<?php echo $eacher['id_producer']; ?>">
-                                                    <?php echo $eacher['name_producer']; ?>
-                                                </label>
+                                                <?php echo $eacher['name_producer']; ?>
                                             </span>
                                         </li>
                                         <?php } ?>
