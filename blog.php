@@ -37,7 +37,7 @@
                         </div>
                         <div class="blog-info">
                             <h3 class="blog_h3">
-                                <a href= "#" class="font_size">Abadon with Rick McCrank</a>
+                                <a href= "single_blog.php" class="font_size">Abadon with Rick McCrank</a>
                             </h3>
                             <ul class="blog-date">
                                 <li class="blog_day">
