@@ -1,10 +1,10 @@
-
+/* 
 .about-section::before {
     content: "";
     display: inline-block;
     vertical-align: middle;
     height: 100%;
-}
+} */
 
 
 /* ABOUT US */
@@ -21,7 +21,6 @@
     padding: 0;
     position: relative;
     background-color: #ffff;
-    margin-bottom: 30px;
     min-height: 700px;
 }
 
@@ -156,6 +155,7 @@
     position: relative;
     margin-right: 2%;
     text-align: center !important;
+    margin-top: 120px;
 }
 
 .about-us .about-section .about_icon_card {
@@ -421,29 +421,26 @@
 }
 .contact_us {
     display: flex;
+    margin-bottom: 100px;
 }
 .txt_info {
     font-size: larger;
-    max-width: 450px;
-    min-width: 200px;
-    width: 100%;
+    width: 70%;
     margin: 10px;
     padding: 15px;
 }
 .bt_submit {
     font-size: larger;
-    width: 96%;
     margin: 10px;
     padding: 15px;
+    width: 60%;
 }
 .get_in_text {
     padding: 10px 20px 0px 20px;
     margin-bottom: 0px;
 }
 .form_contact {
-    width: 500px;
-    margin-right: 140px;
-    margin-left: 10px;
+    width: 100%;
 }
 .h1_ins {
     font-size: 3em;

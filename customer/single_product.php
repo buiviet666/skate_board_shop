@@ -1,6 +1,12 @@
 <?php 
     session_start();
 
+    // Kiểm tra xem 'cart' đã được khởi tạo trong $_SESSION chưa
+    if (!isset($_SESSION['cart'])) {
+        // Nếu chưa, khởi tạo 'cart' là một mảng rỗng
+        $_SESSION['cart'] = array();
+    }
+
     $id_product = $_GET['id'];
     
     require 'connect.php';
@@ -9,6 +15,7 @@
     $result_id_product = mysqli_query($connect, $sql_id_product);
     $each = mysqli_fetch_array($result_id_product);
 
+    // Bây giờ bạn có thể truy cập 'cart' mà không gây lỗi
     $cart = $_SESSION['cart'];
 ?>
 

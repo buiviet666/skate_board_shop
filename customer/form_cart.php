@@ -39,7 +39,7 @@
                                 <div class="form_area_contact">
                                     <div class="form_contact_tittle">
                                         <h2>contact</h2>
-                                        <span>have an account <a href="">Login</a></span>
+                                        <span>back to <a href="shop.php" style="color:#ffffff">shop</a></span>
                                     </div>
                                     <div class="form_cart_input">
                                         <input name="contact" type="text" placeholder="Email" value="<?php echo $each_user['email_user'] ?>" />

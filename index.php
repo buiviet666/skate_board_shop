@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION['id_user']) && $_SESSION['id_user']) {
+        header('location: customer/index.php');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +31,6 @@
 
     <div id = "main">
         <?php include "component_sidebar_left.php" ?>    
-
         <?php include "component_content_right.php" ?>
     </div>
 

@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION['id_user']) && $_SESSION['id_user']) {
+        header('location: customer/index.php');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +44,7 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div style="margin-top: 100px;">
                         <h2 class="get_in_text">GET IN TOUCH</h2>
                         <form class="form_contact">
                             <input type="text" placeholder="Name" class="txt_info" autocapitalize="word">

@@ -1,3 +1,16 @@
+<?php
+    $id_blog = $_GET['id'];
+
+    require 'customer/connect.php';
+
+    $sql_id_blog = "select * from blog where id_blog = '$id_blog'";
+    $result_id_blog = mysqli_query($connect, $sql_id_blog);
+    $each = mysqli_fetch_array($result_id_blog);
+
+    $sql_blog = "select * from blog";
+    $result_blog = mysqli_query($connect, $sql_blog);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,52 +40,45 @@
         <div class = "main_right_content">
             <div class = "right_content_position">
                 <!-- main content -->
-                    <div class="part1">
-                        <div class="img_b1">
-                            <img src="src/img/blog1.jpg" class="imgblog1">
-                            <div class="part2">
-                                <div class="main_blog_headed">Abadon With Rick McCrank</div>
-                                <div class="main_blog_content">This is date time</div>
-                                <hr>
-                                <div class="main_blog_content">
-                                    This is your store’s blog. You can use it to talk about new product launches, experiences, tips or other news you want your customers to read about. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and for your store’s blog. How do I remove this post?Log in to your store’s admin area then go to the blog section to delete this post.
-                                </div>
+                <div class="part1">
+                    <div class="img_b1">
+                        <img src="src/save_img_from_db/<?php echo $each['img_blog']; ?>" class="imgblog1">
+                        <div class="part2">
+                            <div class="main_blog_headed">
+                                <h3>
+                                    <?php echo $each['name_blog']; ?>
+                                </h3>
                             </div>
-                        </div>
-                        <div class="recent">
-                            <h2>RECENT ARTICLE</h2>
-                            <div class="recent_content">
-                                <div class="contents">
-                                    <img src="src/img/blog1.jpg" class="smallimg">
-                                    <div class="recent_para"> 
-                                        <div class="recent_title">Abadon With Rick McCrank</div>
-                                        <div class="small_content">This is content of blog</div>
-                                    </div>
-                                </div>
-                                <div class="contents">
-                                    <img src="src/img/blog1.jpg" class="smallimg">
-                                    <div class="recent_para"> 
-                                        <div class="recent_title">Abadon With Rick McCrank</div>
-                                        <div class="small_content">This is content of blog</div>
-                                    </div>
-                                </div>
-                                <div class="contents">
-                                    <img src="src/img/blog1.jpg" class="smallimg">
-                                    <div class="recent_para"> 
-                                        <div class="recent_title">Abadon With Rick McCrank</div>
-                                        <div class="small_content">This is content of blog</div>
-                                    </div>
-                                </div>
-                                <div class="contents">
-                                    <img src="src/img/blog1.jpg" class="smallimg">
-                                    <div class="recent_para"> 
-                                        <div class="recent_title">Abadon With Rick McCrank</div>
-                                        <div class="small_content">This is content of blog</div>
-                                    </div>
-                                </div>
+                            <div class="main_blog_content"><?php echo $each['date_blog']; ?></div>
+                            <hr>
+                            <div class="main_blog_content">
+                                <?php echo $each['desc_blog']; ?>
                             </div>
                         </div>
                     </div>
+                    <div class="recent">
+                        <h2>RECENT ARTICLE</h2>
+                        <div class="recent_content">
+                            <?php foreach ($result_blog as $eachblogs) { ?>
+                            <div class="contents">
+                                <img src="src/save_img_from_db/<?php echo $eachblogs['img_blog']; ?>" class="smallimg">
+                                <div class="recent_para"> 
+                                    <div class="recent_title">
+                                        <a href="single_blog.php?id=<?php echo $eachblogs['id_blog'] ?>">
+                                            <?php echo $eachblogs['name_blog']; ?>
+                                        </a>
+                                    </div>
+                                    <div class="small_content"><?php echo $eachblogs['date_blog']; ?></div>
+                                </div>
+                            </div>
+                            <?php } ?>
+                        </div>
+                        <div>
+                            <a href="blog.php" style="color: #000;">trở lại blog</a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- footer content -->
                 <?php include "component_footer.php" ?>
             </div>

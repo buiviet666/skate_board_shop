@@ -12,13 +12,13 @@
                     <h4>Infomation</h4>
                     <ul class="footer_site_list">
                         <li>
-                            <a href="#"><i class="fa-regular fa-paper-plane"></i>About Us</a>
+                            <a href="about_us.php"><i class="fa-regular fa-paper-plane"></i>About Us</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa-regular fa-paper-plane"></i>Privacy Policy</a>
+                            <a href=""><i class="fa-regular fa-paper-plane"></i>Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa-regular fa-paper-plane"></i>FAQ's</a>
+                            <a href=""><i class="fa-regular fa-paper-plane"></i>FAQ's</a>
                         </li>
                     </ul>
                 </div>
@@ -26,19 +26,16 @@
                     <h4>Support</h4>
                     <ul class="footer_site_list">
                         <li>
-                            <a href="#"><i class="fa-regular fa-paper-plane"></i>Shop</a>
+                            <a href="shop.php"><i class="fa-regular fa-paper-plane"></i>Shop</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa-regular fa-paper-plane"></i>Product</a>
+                            <a href="shop.php"><i class="fa-regular fa-paper-plane"></i>Product</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa-regular fa-paper-plane"></i>Help</a>
+                            <a href=""><i class="fa-regular fa-paper-plane"></i>Shipping option</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa-regular fa-paper-plane"></i>Shipping option</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-regular fa-paper-plane"></i>Returns policy</a>
+                            <a href=""><i class="fa-regular fa-paper-plane"></i>Returns policy</a>
                         </li>
                     </ul>
                 </div>
@@ -51,7 +48,7 @@
                             </div>
                             <div class="home_blog_content">
                                 <h3>
-                                    <a href="#">Abandon with Rick McCrank</a>
+                                    <a href="blog.php">Abandon with Rick McCrank</a>
                                 </h3>
                                 <p>This is your store's blog. You can use it to talk about new product...</p>
                             </div>
@@ -62,7 +59,7 @@
                             </div>
                             <div class="home_blog_content">
                                 <h3>
-                                    <a href="#">Classics with Rick</a>
+                                    <a href="blog.php">Classics with Rick</a>
                                 </h3>
                                 <p>This is your store's blog. You can use it to talk about new product...</p>
                             </div>
@@ -86,7 +83,7 @@
     <div class="footer_copyrightend">
         <div class="copyright">
             <p>
-                Copyright © 2023, Skateboards <a class="copyright_href" href="#">Powered by 6</a>
+                Copyright © 2023, Skateboards <a class="copyright_href" href="">Powered by 6</a>
             </p>
         </div>
     </div>

@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION['id_user']) && $_SESSION['id_user']) {
+        header('location: customer/index.php');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,16 +46,11 @@
                                 <div class="about_parapart_text">
                                     <h3>Multipurpose store</h3>
                                     <p>
-                                        There are many variations of passages of Lorem Ipsum available, but the majority 
-                                        have suffered alteration in some form, by injected humour, or randomised words 
-                                        which don't look even slightly believable. Lorem Ipsum available, but the majority
-                                            have suffered alteration in some form. Vivamus adipiscing lobortis sagittis. Nullam 
-                                            tempus mauris dolor, ac malesuada arcu. Praesent dolor quam, tincidunt in sollicitudin 
-                                            sit amet, volutpat sed velit. Nullam non neque ipsum.Lorem ipsum dolor sit amet, 
-                                            consectetur adipiscing elit. Morbi euismod diam eu arcu volutpat ut adipiscing sem auctor.
-                                            Vivamus adipiscing lobortis sagittis. Nullam tempus mauris dolor, ac malesuada arcu.
+                                    Các sản phẩm trong cửa hàng bán ván trượt Cửa hàng bán ván trượt là nơi cung cấp các sản phẩm phục vụ cho bộ môn trượt ván: <br/>
+                                    Ván trượt được làm từ nhiều chất liệu khác nhau, phổ biến nhất là gỗ, nhựa và composite. Ván trượt gỗ có độ bền cao và khả năng chịu lực tốt, ván trượt nhựa nhẹ hơn và dễ di chuyển hơn, ván trượt composite có độ bền cao và khả năng chống trầy xước tốt.<br/>
+                                    Ngoài ra, cửa hàng bán ván trượt còn cung cấp các sản phẩm khác như quần áo, giày dép, mũ bảo hiểm,... dành cho người chơi ván trượt.
                                     </p>
-                                    <a class="btn btn_about">Read More</a>
+                                    <a class="btn btn_about" href="shop.php">Read More</a>
                                 </div>
                             </div>
                         </div>

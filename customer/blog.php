@@ -1,5 +1,10 @@
 <?php 
     session_start();
+
+    require 'connect.php';
+
+    $sql_blog = "select * from blog";
+    $result_blog = mysqli_query($connect, $sql_blog);
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +25,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.17/fullpage.css" integrity="sha512-hcCQQPp7EFTf6BXS6aGe9vk02E5YZzjaI4K1KsAUUjm6WvfvSPKFn4jJiYMiQ68NRl/I6SEl33gW+NVeqZI15g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="src/css/single.css">
+    <link rel="stylesheet" href="../src/css/single.css">
 </head>
 
 <body>
@@ -31,28 +36,39 @@
         <div class = "main_right_content">
             <div class = "right_content_position">
                 <!-- main content -->
-                <h3 style="text-align:center">
-                    News    
-                </h3>
-                <div class="blog">
-                    <img src="https://skateboards-demo.myshopify.com/cdn/shop/articles/blog-2_2035fd6d-8799-4aaf-874f-a4261e944db5.jpg?v=1472732581" alt="Abandon with Rick McCrank" class="shoe">
-                </div>
-                <div class="grid_item">
-                    <div class="blog-info">
-                    <h3>
-                        <a href="single_blog.php">Abadon with Rick McCrank</a>
-                    </h3>
-                    <ul class="blog-date">
-                        <li>
-                            <span>29 Aug 2016</span>
-                        </li>
-                        <li>ram m</li>
-                    </ul>
-                    <p class="desc">
-                    This is your store's blog. You can use it to talk about new product launches, experiences, tips or other news you want your customers to read about. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and for your store’s blog. How do I remove this post?Log in to your store’s admin area then go to the blog section to delete this post.
-                    </p>
+                <div class="blogs">
+                    <div class="blogs_container">
+                        <h3 class="blogs_tittle">News</h3>
+                        <div class="blogs_content_main">
+                            <?php foreach ($result_blog as $each) { ?>
+                            <div class="blogs_content_container">
+                                <div class="blogs_imgs_main">
+                                    <p>
+                                        <a>
+                                            <img src="../src/save_img_from_db/<?php echo $each['img_blog']; ?>">
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="blogs_content_para">
+                                    <div class="blogs_content_para_container">
+                                        <h3>
+                                            <?php echo $each['name_blog']; ?>
+                                        </h3>
+                                        <span>
+                                            <?php echo $each['date_blog']; ?>
+                                        </span>
+                                        <p>
+                                            <?php echo $each['desc_blog']; ?>
+                                        </p>
+                                        <a class="btn_blog" href="single_blog.php?id=<?php echo $each['id_blog'] ?>">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
+
                 <!-- footer content -->
                 <?php include "component_footer.php" ?>
             </div>

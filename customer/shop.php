@@ -286,7 +286,7 @@
                                                                 <a style="display: inline-block; color: #000;" href="process_add_or_buy.php?id=<?php echo $each['id_product'] ;?>&type=add"$ class="shop_icon_minicss hover_green_icon" >
                                                                     <i class="fa-solid fa-cart-shopping"></i>
                                                                 </a>
-                                                                <a style="display: inline-block;" class="shop_icon_minicss hover_green_icon">
+                                                                <a href="single_product.php?id=<?php echo $each['id_product'] ?>" style="display: inline-block;" class="shop_icon_minicss hover_green_icon">
                                                                     <i class="fa-solid fa-magnifying-glass"></i>
                                                                 </a>
                                                                 <a style="display: inline-block;" class="shop_icon_minicss hover_pink_icon">

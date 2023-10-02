@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION['id_user']) && $_SESSION['id_user']) {
+        header('location: customer/index.php');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +41,7 @@
                     <div class="inpage_container">
                         <form class="inpage_form" action="process_login.php" method="post" onsubmit="return validateFormLogin()">
                             <input type="text" placeholder="Username" name="login_user" id="username">
-                            <input type="text" placeholder="Password" name="password_user" id="password">
+                            <input type="password" placeholder="Password" name="password_user" id="password">
 
                             <a class="inpage_link" href="#">Forgot your password?</a>
                             

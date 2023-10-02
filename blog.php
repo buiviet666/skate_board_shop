@@ -1,3 +1,17 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION['id_user']) && $_SESSION['id_user']) {
+        header('location: customer/index.php');
+        exit();
+    }
+
+    require 'customer/connect.php';
+
+    $sql_blog = "select * from blog";
+    $result_blog = mysqli_query($connect, $sql_blog);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,92 +41,39 @@
         <div class = "main_right_content">
             <div class = "right_content_position">
                 <!-- main content -->
-                <div class="blog_img1">
-                    <div style="text-align:center" class="img_width">
-                        News    
-                    </div>
-                    <div class="blog_image1">
-                        <div class="img1_fix">
-                            <img src="https://skateboards-demo.myshopify.com/cdn/shop/articles/blog-2_2035fd6d-8799-4aaf-874f-a4261e944db5.jpg?v=1472732581" alt="Abandon with Rick McCrank" class="shoe">
-                        </div>
-                        <div class="blog-info">
-                            <h3 class="blog_h3">
-                                <a href= "single_blog.php" class="font_size">Abadon with Rick McCrank</a>
-                            </h3>
-                            <ul class="blog-date">
-                                <li class="blog_day">
-                                    <span>29 Aug 2016    ram m</span>
-                                </li>
-                            </ul>
-                            <hr class="blog_width">
-                            <!-- <hr> -->
-                            <div class="desc">
-                                This is your store’s blog. You can use it to talk about new product launches, experiences, tips or other news you want your customers to read about. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and for your store’s blog. How do I remove this post?Log in to your store’s admin area then go to the blog section to delete this post.
+                <div class="blogs">
+                    <div class="blogs_container">
+                        <h3 class="blogs_tittle">News</h3>
+                        <div class="blogs_content_main">
+                            <?php foreach ($result_blog as $each) { ?>
+                            <div class="blogs_content_container">
+                                <div class="blogs_imgs_main">
+                                    <p>
+                                        <a>
+                                            <img src="src/save_img_from_db/<?php echo $each['img_blog']; ?>">
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="blogs_content_para">
+                                    <div class="blogs_content_para_container">
+                                        <h3>
+                                            <?php echo $each['name_blog']; ?>
+                                        </h3>
+                                        <span>
+                                            <?php echo $each['date_blog']; ?>
+                                        </span>
+                                        <p>
+                                            <?php echo $each['desc_blog']; ?>
+                                        </p>
+                                        <a class="btn_blog" href="single_blog.php?id=<?php echo $each['id_blog'] ?>">Details</a>
+                                    </div>
+                                </div>
                             </div>
-                            <br>
-                        <!-- <a href="#" class="btn">
-                            <span>Read More</span>
-                        </a> -->
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
-                <div class="blog_img2">
-                    <div class="img2_fix">
-                        <img src="https://skateboards-demo.myshopify.com/cdn/shop/articles/blog-1_09544ddd-6a67-4ed8-b2f1-cee954d4c53c.jpg?v=1472732487" alt="Classics with Rick" class="shoe_img2">
-                    </div>
-                    <div class="blog_info">
-                        <h3 class="blog_h3_img2">
-                            <a href="#" class="font_size_img2">Classics with Rick</a>
-                        </h3>
-                        <ul class="blog_date_img2">
-                            <li class="blog_day_img2">
-                                <span>29 Aug 2016    ram m</span>
-                            </li>
-                        </ul>
-                        <hr class="blog_width">
-                        <div class="decs_img2">
-                        This is your store’s blog. You can use it to talk about new product launches, experiences, tips or other news you want your customers to read about. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and for your store’s blog. How do I remove this post?Log in to your store’s admin area then go to the blog section to delete this post.
-                        </div>
-                    </div>
-                </div>
-                <div class="blog_img3">
-                    <div class="img3_fix">
-                        <img src="https://skateboards-demo.myshopify.com/cdn/shop/articles/blog-4.jpg?v=1472732703" alt="Golden Skate" class="shoe_img3">
-                    </div>
-                    <div class="blog_info_img3">
-                        <h3 class="blog_h3_img3">
-                            <a href="#">Golden Skate</a>
-                        </h3>
-                        <ul class="blog_date_img3">
-                            <li class="blog_day_img3">
-                                <span>29 Aug 2016    ram m</span>
-                            </li>
-                        </ul>
-                        <hr class="blog_width">
-                        <div class="decs_img3">
-                        This is your store’s blog. You can use it to talk about new product launches, experiences, tips or other news you want your customers to read about. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and for your store’s blog. How do I remove this post?Log in to your store’s admin area then go to the blog section to delete this post.
-                        </div>
-                    </div>
-                </div>
-                <div class="blog_img4">
-                    <div class="img4_fix">
-                        <img src="https://skateboards-demo.myshopify.com/cdn/shop/articles/blog-3.jpg?v=1472732629" alt="Rainbo Edge" class="shoe_img4">
-                    </div>
-                    <div class="blog_info_img4">
-                        <h3 class="blog_h4_img4">
-                            <a href="#">Rainbo Edge</a>
-                        </h3>
-                        <ul class="blog_date_img4">
-                            <li class="blog_day_img4">
-                                <span>29 Aug 2016    ram m</span>
-                            </li>
-                        </ul>
-                        <hr class="blog_width">
-                        <div class="decs_img4">
-                        This is your store’s blog. You can use it to talk about new product launches, experiences, tips or other news you want your customers to read about. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and for your store’s blog. How do I remove this post?Log in to your store’s admin area then go to the blog section to delete this post.
-                        </div>
-                    </div>
-                </div>
+
                 <!-- footer content -->
                 <?php include "component_footer.php" ?>
             </div>
