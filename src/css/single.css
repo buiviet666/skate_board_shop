@@ -758,6 +758,7 @@
     margin: 15px 0;
     font-weight: 300;
     height: 50%;
+    overflow-x: auto;
 }
 
 .btn_blog {

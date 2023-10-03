@@ -1,6 +1,10 @@
 <?php 
     session_start();
 
+    if (empty($_SESSION['cart'])) {
+        header('location: shop.php');
+    }
+
     $cart = $_SESSION['cart'];
     $sum_price = 0;
     $id_user = $_SESSION['id_user'];

@@ -13,7 +13,7 @@
     if (isset($_POST['searchInput'])) {
         $searchTerm = $_POST['searchInput'];
 
-        $sql_invoice = "select * from hoadon ngaylap_hoadon like '%$searchTerm%'";
+        $sql_invoice = "select * from hoadon where ngaylap_hoadon like '%$searchTerm%'";
         $result_sql_invoice = mysqli_query($connect, $sql_invoice);
     }
 ?>

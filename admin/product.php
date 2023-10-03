@@ -168,8 +168,12 @@
                                                                 <span></span>
                                                             </div>
                                                             <div class="input_position">
-                                                                <input id="input_value_fix_producer" type="text" name="name_fix_producer"/>
-                                                                <input id="id_fix_producer" type="hidden" name="id_fix_producer" />
+                                                                <input id="input_value_fix_producer" type="text" value="<?php
+                                                                    $sql_product_name = "SELECT * FROM producer WHERE id_producer = " . mysqli_real_escape_string($connect, $each['id_producer']);
+                                                                    $result_sql_product_name = mysqli_query($connect, $sql_product_name);
+                                                                    $each_name_producer = mysqli_fetch_array($result_sql_product_name);
+                                                                    echo $each_name_producer['name_producer']; ?>" name="name_fix_producer"/>
+                                                                <input id="id_fix_producer" value="<?php echo $each['id_producer']; ?>" type="hidden" name="id_fix_producer" />
                                                                 <p>Tên nhà sản xuất</p>
                                                                 <span></span>
 

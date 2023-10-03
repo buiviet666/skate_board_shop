@@ -117,7 +117,7 @@
                                 </p>
                                 <a href="shop.php">Continue Shopping</a>
                                 <a href="">Update cart</a>
-                                <button style="padding: 14px 14px !important;">Check out</button>
+                                <button style="padding: 14px 14px !important;" id="checkoutBtn">Check out</button>
                             </div>
                         </div>
                     </form>
@@ -129,6 +129,22 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        // JavaScript to handle the "Check out" button click
+        document.getElementById('checkoutBtn').addEventListener('click', function() {
+            <?php 
+                // Check if the cart is empty
+                if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
+                    echo 'alert("Vui lòng chọn sản phẩm.");';
+                    echo 'window.location.href = "shop.php";'; // Redirect to shop.php
+                } else {
+                    // Redirect to the checkout page
+                    echo 'window.location.href = "checkout.php";';
+                }
+            ?>
+        });
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.17/fullpage.min.js" integrity="sha512-zAHJKGyoPf2Y20Wi4uo32sa/vSvwKfY4tYUt6gJfmkA79X0wt5ZfaxL5GqJ5cMnmvGslWi5PKTo51rHRZqYbJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../src/javascript/index.js"></script>
