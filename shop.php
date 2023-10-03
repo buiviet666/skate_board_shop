@@ -36,8 +36,8 @@
     } else if (isset($_GET['filter']) && $_GET['filter'] === 'truck') {
         $sql = "SELECT * FROM product WHERE type_product = 'truck'";
         $result_product = mysqli_query($connect, $sql);
-    } else if (isset($_GET['filter']) && $_GET['filter'] === 'weel') {
-        $sql = "SELECT * FROM product WHERE type_product = 'weel'";
+    } else if (isset($_GET['filter']) && $_GET['filter'] === 'wheels') {
+        $sql = "SELECT * FROM product WHERE type_product = 'wheels'";
         $result_product = mysqli_query($connect, $sql);
     } else if (isset($_GET['filter']) && $_GET['filter'] === 'tool') {
         $sql = "SELECT * FROM product WHERE type_product = 'tool'";
@@ -65,8 +65,8 @@
         $result_count_product = mysqli_query($connect, $sql_count);
         $rows = mysqli_fetch_array($result_count_product);
         $total_rows = $rows['total_rows'];
-    } else if (isset($_GET['filter']) && $_GET['filter'] === 'weel') {
-        $sql_count = "SELECT COUNT(*) AS total_rows FROM product WHERE type_product = 'weel'";
+    } else if (isset($_GET['filter']) && $_GET['filter'] === 'wheels') {
+        $sql_count = "SELECT COUNT(*) AS total_rows FROM product WHERE type_product = 'wheels'";
         $result_count_product = mysqli_query($connect, $sql_count);
         $rows = mysqli_fetch_array($result_count_product);
         $total_rows = $rows['total_rows'];
@@ -153,16 +153,16 @@
                                             <i class="shop_down_icon fa-solid fa-chevron-down"></i>
                                             <ul class="shop_dropdown-menu list_down_product_sk8">
                                                 <li>
-                                                    <a href="shop.php?filter=deck">deck</a>
+                                                    <a href="shop.php?filter=deck">decks</a>
                                                 </li>
                                                 <li>
-                                                    <a href="shop.php?filter=truck">truck</a>
+                                                    <a href="shop.php?filter=truck">trucks</a>
                                                 </li>
                                                 <li>
-                                                    <a href="shop.php?filter=weel">weel</a>
+                                                    <a href="shop.php?filter=wheels">wheels</a>
                                                 </li>
                                                 <li>
-                                                    <a href="shop.php?filter=tool">tool</a>
+                                                    <a href="shop.php?filter=tool">tools</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -172,13 +172,13 @@
                                             <i class="shop_down_icon fa-solid fa-chevron-down"></i>
                                             <ul class="shop_dropdown-menu list_down_clother_sk8">
                                                 <li>
-                                                    <a href="shop.php?filter=shirt">shirt</a>
+                                                    <a href="shop.php?filter=shirt">shirts</a>
                                                 </li>
                                                 <li>
                                                     <a href="shop.php?filter=trousers">trousers</a>
                                                 </li>
                                                 <li>
-                                                    <a href="shop.php?filter=shoe">shoe</a>
+                                                    <a href="shop.php?filter=shoe">shoes</a>
                                                 </li>
                                             </ul>
                                         </li>

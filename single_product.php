@@ -137,7 +137,7 @@
                     <div class="single_shop_descrip">
                         <h3>Description</h3>
                         <p>
-                            <?php echo $each['number_product']; ?>
+                            <?php echo $each['desc_product']; ?>
                         </p>
                     </div>
                     <div class="single_shop_ship_pos">
