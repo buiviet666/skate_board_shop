@@ -148,9 +148,46 @@
                                                                 <span></span>
                                                             </div>
                                                             <div class="input_position">
-                                                                <input type="text" name="trangthai_donhang" value="<?php echo $each['trangthai_donhang']; ?>" required />
+                                                                <?php 
+                                                                    switch ($each['trangthai_donhang']) {
+                                                                        case 'Đã hoàn thành':
+                                                                            echo "<select id='trangthai' name='trangthai_donhang'>";
+                                                                            echo "<option value='Đã hoàn thành' selected='true'>Đã hoàn thành</option>";
+                                                                            echo "<option value='Đang xử lý'>Đang xử lý</option>";
+                                                                            echo "<option value='Đang giao hàng'>Đang giao hàng</option>";
+                                                                            echo "<option value='Đã hủy'>Đã hủy</option>";
+                                                                            echo "</select>";
+                                                                            break;
+                                                                        case 'Đang xử lý':
+                                                                            echo "<select id='trangthai' name='trangthai_donhang'>";
+                                                                            echo "<option value='Đã hoàn thành'>Đã hoàn thành</option>";
+                                                                            echo "<option value='Đang xử lý' selected='true'>Đang xử lý</option>";
+                                                                            echo "<option value='Đang giao hàng'>Đang giao hàng</option>";
+                                                                            echo "<option value='Đã hủy'>Đã hủy</option>";
+                                                                            echo "</select>";
+                                                                            break;      
+                                                                        case 'Đang giao hàng':
+                                                                            echo "<select id='trangthai' name='trangthai_donhang'>";
+                                                                            echo "<option value='Đã hoàn thành'>Đã hoàn thành</option>";
+                                                                            echo "<option value='Đang xử lý'>Đang xử lý</option>";
+                                                                            echo "<option value='Đang giao hàng' selected='true'>Đang giao hàng</option>";
+                                                                            echo "<option value='Đã hủy'>Đã hủy</option>";
+                                                                            echo "</select>";
+                                                                            break;               
+                                                                        default:
+                                                                            echo "<select id='trangthai' name='trangthai_donhang'>";
+                                                                            echo "<option value='Đã hoàn thành'>Đã hoàn thành</option>";
+                                                                            echo "<option value='Đang xử lý'>Đang xử lý</option>";
+                                                                            echo "<option value='Đang giao hàng'>Đang giao hàng</option>";
+                                                                            echo "<option value='Đã hủy' selected='true'>Đã hủy</option>";
+                                                                            echo "</select>";
+                                                                            break;   
+                                                                    }
+                                                                ?>
+                                                                <!-- <input type="text" name="trangthai_donhang" value="<?php echo $each['trangthai_donhang']; ?>" required />
                                                                 <p>Trạng thái</p>
-                                                                <span></span>
+                                                                <span></span> -->
+                                                            </div>
                                                             </div>
 
                                                         </main>
