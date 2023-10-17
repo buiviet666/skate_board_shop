@@ -31,7 +31,7 @@
                             <li><a href="index.php">HOME</a></li>
                             <li><a href="about_us.php">ABOUT US</a></li>
                             <li><a href="shop.php">SHOP</a></li>
-                            <li style="cursor: default;"><a>CATEGORIES <i class="icon_hover_setup fa-solid fa-chevron-right"></i></a></li>
+                            <!-- <li style="cursor: default;"><a>CATEGORIES <i class="icon_hover_setup fa-solid fa-chevron-right"></i></a></li> -->
                             <li><a href="blog.php">BLOG</a></li>
                             <li><a href="contact_us.php">CONTACT US</a></li>
                         </ul>
