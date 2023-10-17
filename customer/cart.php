@@ -110,7 +110,6 @@
                                     <span>Subtotal: </span>
                                     <span>
                                         <?php 
-                                            
                                             echo $sum_price;
                                         ?> $
                                     </span>
@@ -140,7 +139,7 @@
                     echo 'window.location.href = "shop.php";'; // Redirect to shop.php
                 } else {
                     // Redirect to the checkout page
-                    echo 'window.location.href = "checkout.php";';
+                    echo 'window.location.href = "form_cart.php";';
                 }
             ?>
         });

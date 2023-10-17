@@ -6,9 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
     require '../connect.php';
 
     // Thực hiện truy vấn xóa sản phẩm
-    $sql = "DELETE FROM donhang WHERE id_order = ?";
+    $sql = "DELETE FROM donhang WHERE id_donhang = ?";
     $stmt = mysqli_prepare($connect, $sql);
-    mysqli_stmt_bind_param($stmt, "i", $id_order);
+    mysqli_stmt_bind_param($stmt, "s", $id_order);
 
     if (mysqli_stmt_execute($stmt)) {
         // Đóng statement và kết nối cơ sở dữ liệu
